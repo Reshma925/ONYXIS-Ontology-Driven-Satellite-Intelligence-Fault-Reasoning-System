@@ -1,0 +1,2209 @@
+Prefix(:=<http://example.org/satellite#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(swrl:=<http://www.w3.org/2003/11/swrl#>)
+Prefix(swrlb:=<http://www.w3.org/2003/11/swrlb#>)
+Prefix(satellite:=<http://example.org/satellite#>)
+
+
+Ontology(<http://example.org/satellite#>
+
+Declaration(Class(satellite:AOCS))
+Declaration(Class(satellite:Action))
+Declaration(Class(satellite:Actuator))
+Declaration(Class(satellite:AlignmentFailure))
+Declaration(Class(satellite:AmplifierFault))
+Declaration(Class(satellite:Antenna))
+Declaration(Class(satellite:AntennaFault))
+Declaration(Class(satellite:AntennaMount))
+Declaration(Class(satellite:AntennaPointing))
+Declaration(Class(satellite:AntennaPointingFault))
+Declaration(Class(satellite:AttitudeControl))
+Declaration(Class(satellite:AttitudeControlFault))
+Declaration(Class(satellite:Battery))
+Declaration(Class(satellite:BatteryChargeController))
+Declaration(Class(satellite:BatteryFault))
+Declaration(Class(satellite:BatteryTemp))
+Declaration(Class(satellite:Bracket))
+Declaration(Class(satellite:BusFault))
+Declaration(Class(satellite:ChargeControllerFault))
+Declaration(Class(satellite:Coating))
+Declaration(Class(satellite:CommandReceiver))
+Declaration(Class(satellite:CommandReceiverFault))
+Declaration(Class(satellite:CommunicationSystem))
+Declaration(Class(satellite:Communication_Component))
+Declaration(Class(satellite:Component))
+Declaration(Class(satellite:Control))
+Declaration(Class(satellite:CriticalPowerFailure))
+Declaration(Class(satellite:Decoder))
+Declaration(Class(satellite:DecoderFault))
+Declaration(Class(satellite:Demodulator))
+Declaration(Class(satellite:DemodulatorFault))
+Declaration(Class(satellite:DeploymentFailure))
+Declaration(Class(satellite:DeploymentMechanism))
+Declaration(Class(satellite:DeploymentSwitch))
+Declaration(Class(satellite:Downconverter))
+Declaration(Class(satellite:DownconverterFault))
+Declaration(Class(satellite:Duplexer))
+Declaration(Class(satellite:DuplexerFault))
+Declaration(Class(satellite:EarthSensor))
+Declaration(Class(satellite:EarthSensorFault))
+Declaration(Class(satellite:Encoder))
+Declaration(Class(satellite:EncoderFault))
+Declaration(Class(satellite:Fault))
+Declaration(Class(satellite:Filter))
+Declaration(Class(satellite:FilterFault))
+Declaration(Class(satellite:GNSSFault))
+Declaration(Class(satellite:GNSSReceiver))
+Declaration(Class(satellite:GroundLinkFault))
+Declaration(Class(satellite:GroundStation))
+Declaration(Class(satellite:GyroFault))
+Declaration(Class(satellite:Gyroscope))
+Declaration(Class(satellite:HealthyComponent))
+Declaration(Class(satellite:Heater))
+Declaration(Class(satellite:HeaterFault))
+Declaration(Class(satellite:Hinge))
+Declaration(Class(satellite:LNA))
+Declaration(Class(satellite:LNAFault))
+Declaration(Class(satellite:LOFault))
+Declaration(Class(satellite:LocalOscillator))
+Declaration(Class(satellite:MLILayer))
+Declaration(Class(satellite:Magnetometer))
+Declaration(Class(satellite:MagnetometerFault))
+Declaration(Class(satellite:Magnetorquer))
+Declaration(Class(satellite:MagnetorquerFault))
+Declaration(Class(satellite:Mount))
+Declaration(Class(satellite:MountFailure))
+Declaration(Class(satellite:OBC))
+Declaration(Class(satellite:OBCTemp))
+Declaration(Class(satellite:OBC_Component))
+Declaration(Class(satellite:OnBoardComputer))
+Declaration(Class(satellite:OrbitControl))
+Declaration(Class(satellite:OrbitControlFault))
+Declaration(Class(satellite:OverheatFault))
+Declaration(Class(satellite:PCDU))
+Declaration(Class(satellite:PCDUFault))
+Declaration(Class(satellite:Panel))
+Declaration(Class(satellite:PositionFeedback))
+Declaration(Class(satellite:PowerAmplifier))
+Declaration(Class(satellite:PowerBusLine))
+Declaration(Class(satellite:PowerSystem))
+Declaration(Class(satellite:Power_Component))
+Declaration(Class(satellite:RFTemp))
+Declaration(Class(satellite:Radiator))
+Declaration(Class(satellite:ReactionWheel))
+Declaration(Class(satellite:ReactionWheelFault))
+Declaration(Class(satellite:RegulatorFault))
+Declaration(Class(satellite:SatelliteFrame))
+Declaration(Class(satellite:Sensor))
+Declaration(Class(satellite:SensorFault))
+Declaration(Class(satellite:SignalLossFault))
+Declaration(Class(satellite:SolarArray))
+Declaration(Class(satellite:SolarCell))
+Declaration(Class(satellite:SolarFault))
+Declaration(Class(satellite:SolarPanel))
+Declaration(Class(satellite:SolarPanelMount))
+Declaration(Class(satellite:SolarPanelTemp))
+Declaration(Class(satellite:StarTracker))
+Declaration(Class(satellite:StarTrackerFault))
+Declaration(Class(satellite:StructuralFailure))
+Declaration(Class(satellite:StructureComponent))
+Declaration(Class(satellite:StructureSubsystem))
+Declaration(Class(satellite:Subsystem))
+Declaration(Class(satellite:SunSensor))
+Declaration(Class(satellite:SunSensorFault))
+Declaration(Class(satellite:TTCAntenna))
+Declaration(Class(satellite:TTCAntennaFault))
+Declaration(Class(satellite:TTCRadio))
+Declaration(Class(satellite:TTCRadioFault))
+Declaration(Class(satellite:TelemetryEncoder))
+Declaration(Class(satellite:TelemetryEncoderFault))
+Declaration(Class(satellite:TempSensor))
+Declaration(Class(satellite:ThermalPath))
+Declaration(Class(satellite:ThermalSensor))
+Declaration(Class(satellite:ThermalSystem))
+Declaration(Class(satellite:Thermal_Component))
+Declaration(Class(satellite:Thermostat))
+Declaration(Class(satellite:Thruster))
+Declaration(Class(satellite:ThrusterFault))
+Declaration(Class(satellite:TrackingFault))
+Declaration(Class(satellite:TrackingUnit))
+Declaration(Class(satellite:Transmitter))
+Declaration(Class(satellite:UnderheatFault))
+Declaration(Class(satellite:Upconverter))
+Declaration(Class(satellite:UpconverterFault))
+Declaration(Class(satellite:VibrationFailure))
+Declaration(Class(satellite:VibrationIsolation))
+Declaration(Class(satellite:VibrationSensor))
+Declaration(Class(satellite:VoltageRegulator))
+Declaration(ObjectProperty(satellite:affectsComponent))
+Declaration(ObjectProperty(satellite:belongsToSubsystem))
+Declaration(ObjectProperty(satellite:connectedStructurally))
+Declaration(ObjectProperty(satellite:connectedTo))
+Declaration(ObjectProperty(satellite:controls))
+Declaration(ObjectProperty(satellite:cools))
+Declaration(ObjectProperty(satellite:dependsOn))
+Declaration(ObjectProperty(satellite:distributesPowerTo))
+Declaration(ObjectProperty(satellite:executesCommandFrom))
+Declaration(ObjectProperty(satellite:feedsCommandTo))
+Declaration(ObjectProperty(satellite:feedsDataTo))
+Declaration(ObjectProperty(satellite:feedsPowerTo))
+Declaration(ObjectProperty(satellite:feedsSignalTo))
+Declaration(ObjectProperty(satellite:feedsTelemetryTo))
+Declaration(ObjectProperty(satellite:hasFault))
+Declaration(ObjectProperty(satellite:heats))
+Declaration(ObjectProperty(satellite:influences))
+Declaration(ObjectProperty(satellite:isolatesVibration))
+Declaration(ObjectProperty(satellite:monitors))
+Declaration(ObjectProperty(satellite:mountedOn))
+Declaration(ObjectProperty(satellite:physicallySupports))
+Declaration(ObjectProperty(satellite:propagatesTo))
+Declaration(ObjectProperty(satellite:protects))
+Declaration(ObjectProperty(satellite:receivesCommandFrom))
+Declaration(ObjectProperty(satellite:receivesTelemetryFrom))
+Declaration(ObjectProperty(satellite:sendsCommandTo))
+Declaration(ObjectProperty(satellite:sendsTelemetryTo))
+Declaration(ObjectProperty(satellite:suppliesPowerTo))
+Declaration(ObjectProperty(satellite:supports))
+Declaration(ObjectProperty(satellite:supportsStructure))
+Declaration(ObjectProperty(satellite:transfersHeatTo))
+Declaration(ObjectProperty(satellite:triggersAction))
+Declaration(ObjectProperty(satellite:usesSensorDataFrom))
+Declaration(DataProperty(satellite:hasAngularRate))
+Declaration(DataProperty(satellite:hasAttitudeError))
+Declaration(DataProperty(satellite:hasBandwidth))
+Declaration(DataProperty(satellite:hasBitErrorRate))
+Declaration(DataProperty(satellite:hasBusVoltage))
+Declaration(DataProperty(satellite:hasCarrierFrequency))
+Declaration(DataProperty(satellite:hasChargeLevel))
+Declaration(DataProperty(satellite:hasChargeRate))
+Declaration(DataProperty(satellite:hasCoolingEfficiency))
+Declaration(DataProperty(satellite:hasCycleCount))
+Declaration(DataProperty(satellite:hasDecodingError))
+Declaration(DataProperty(satellite:hasDegradationRate))
+Declaration(DataProperty(satellite:hasDischargeRate))
+Declaration(DataProperty(satellite:hasDistributionLoad))
+Declaration(DataProperty(satellite:hasEarthVectorError))
+Declaration(DataProperty(satellite:hasEncodingQuality))
+Declaration(DataProperty(satellite:hasEncodingRate))
+Declaration(DataProperty(satellite:hasFrequencyShift))
+Declaration(DataProperty(satellite:hasFrequencyStability))
+Declaration(DataProperty(satellite:hasGain))
+Declaration(DataProperty(satellite:hasGeneratedPower))
+Declaration(DataProperty(satellite:hasHeatLevel))
+Declaration(DataProperty(satellite:hasIrradiance))
+Declaration(DataProperty(satellite:hasIsolation))
+Declaration(DataProperty(satellite:hasLinkQuality))
+Declaration(DataProperty(satellite:hasLoadDistributionBalance))
+Declaration(DataProperty(satellite:hasMagneticFieldError))
+Declaration(DataProperty(satellite:hasMagneticMoment))
+Declaration(DataProperty(satellite:hasOrbitDeviation))
+Declaration(DataProperty(satellite:hasOutputPower))
+Declaration(DataProperty(satellite:hasOutputVoltage))
+Declaration(DataProperty(satellite:hasPanelEfficiency))
+Declaration(DataProperty(satellite:hasPointingError))
+Declaration(DataProperty(satellite:hasPositionError))
+Declaration(DataProperty(satellite:hasPriority))
+Declaration(DataProperty(satellite:hasRegulatedVoltage))
+Declaration(DataProperty(satellite:hasSensorAccuracy))
+Declaration(DataProperty(satellite:hasSeverity))
+Declaration(DataProperty(satellite:hasSignalStrength))
+Declaration(DataProperty(satellite:hasSunVectorError))
+Declaration(DataProperty(satellite:hasTemperature))
+Declaration(DataProperty(satellite:hasTemperatureTele))
+Declaration(DataProperty(satellite:hasThrust))
+Declaration(DataProperty(satellite:hasTrackingAccuracy))
+Declaration(DataProperty(satellite:hasTrackingError))
+Declaration(DataProperty(satellite:hasTransmitPower))
+Declaration(DataProperty(satellite:hasVibration))
+Declaration(DataProperty(satellite:hasVoltageOutput))
+Declaration(NamedIndividual(satellite:AC_01))
+Declaration(NamedIndividual(satellite:ANT_01))
+Declaration(NamedIndividual(satellite:AOCS_01))
+Declaration(NamedIndividual(satellite:AlignmentFailure_001))
+Declaration(NamedIndividual(satellite:AmplifierFault_001))
+Declaration(NamedIndividual(satellite:AntennaFault_001))
+Declaration(NamedIndividual(satellite:AntennaMount_01))
+Declaration(NamedIndividual(satellite:AntennaPointingFault_001))
+Declaration(NamedIndividual(satellite:Antenna_01))
+Declaration(NamedIndividual(satellite:AttitudeControlFault_001))
+Declaration(NamedIndividual(satellite:BCC_01))
+Declaration(NamedIndividual(satellite:BatteryFault_001))
+Declaration(NamedIndividual(satellite:BatteryTemp_01))
+Declaration(NamedIndividual(satellite:Battery_01))
+Declaration(NamedIndividual(satellite:Bracket_01))
+Declaration(NamedIndividual(satellite:BusFault_001))
+Declaration(NamedIndividual(satellite:BusLine_01))
+Declaration(NamedIndividual(satellite:ChargeControllerFault_001))
+Declaration(NamedIndividual(satellite:Coating_01))
+Declaration(NamedIndividual(satellite:Comm_01))
+Declaration(NamedIndividual(satellite:CommandReceiverFault_001))
+Declaration(NamedIndividual(satellite:CommandReceiver_01))
+Declaration(NamedIndividual(satellite:DecoderFault_001))
+Declaration(NamedIndividual(satellite:Decoder_01))
+Declaration(NamedIndividual(satellite:DemodulatorFault_001))
+Declaration(NamedIndividual(satellite:Demodulator_01))
+Declaration(NamedIndividual(satellite:DeploymentFailure_001))
+Declaration(NamedIndividual(satellite:Deployment_01))
+Declaration(NamedIndividual(satellite:DownconverterFault_001))
+Declaration(NamedIndividual(satellite:Downconverter_01))
+Declaration(NamedIndividual(satellite:DuplexerFault_001))
+Declaration(NamedIndividual(satellite:Duplexer_01))
+Declaration(NamedIndividual(satellite:EARTH_01))
+Declaration(NamedIndividual(satellite:EarthSensorFault_001))
+Declaration(NamedIndividual(satellite:EncoderFault_001))
+Declaration(NamedIndividual(satellite:Encoder_01))
+Declaration(NamedIndividual(satellite:FilterFault_001))
+Declaration(NamedIndividual(satellite:Filter_01))
+Declaration(NamedIndividual(satellite:Frame_01))
+Declaration(NamedIndividual(satellite:GNSSFault_001))
+Declaration(NamedIndividual(satellite:GNSS_01))
+Declaration(NamedIndividual(satellite:GYRO_01))
+Declaration(NamedIndividual(satellite:GroundLinkFault_001))
+Declaration(NamedIndividual(satellite:GroundStation_01))
+Declaration(NamedIndividual(satellite:GyroFault_001))
+Declaration(NamedIndividual(satellite:HeaterFault_001))
+Declaration(NamedIndividual(satellite:HeaterON_01))
+Declaration(NamedIndividual(satellite:Heater_01))
+Declaration(NamedIndividual(satellite:Hinge_01))
+Declaration(NamedIndividual(satellite:Isolation_01))
+Declaration(NamedIndividual(satellite:LNAFault_001))
+Declaration(NamedIndividual(satellite:LNA_01))
+Declaration(NamedIndividual(satellite:LOFault_001))
+Declaration(NamedIndividual(satellite:LO_01))
+Declaration(NamedIndividual(satellite:MAG_01))
+Declaration(NamedIndividual(satellite:MLI_01))
+Declaration(NamedIndividual(satellite:MTQ_01))
+Declaration(NamedIndividual(satellite:MagnetometerFault_001))
+Declaration(NamedIndividual(satellite:MagnetorquerFault_001))
+Declaration(NamedIndividual(satellite:MountFailure_001))
+Declaration(NamedIndividual(satellite:Mount_01))
+Declaration(NamedIndividual(satellite:OBCTemp_01))
+Declaration(NamedIndividual(satellite:OBC_01))
+Declaration(NamedIndividual(satellite:ORB_01))
+Declaration(NamedIndividual(satellite:OrbitControlFault_001))
+Declaration(NamedIndividual(satellite:OverheatFault_001))
+Declaration(NamedIndividual(satellite:PCDUFault_001))
+Declaration(NamedIndividual(satellite:PCDU_01))
+Declaration(NamedIndividual(satellite:Panel_01))
+Declaration(NamedIndividual(satellite:PositionSensor_01))
+Declaration(NamedIndividual(satellite:PowerAmp_01))
+Declaration(NamedIndividual(satellite:PowerSaveMode))
+Declaration(NamedIndividual(satellite:Power_01))
+Declaration(NamedIndividual(satellite:RFTemp_01))
+Declaration(NamedIndividual(satellite:RW_01))
+Declaration(NamedIndividual(satellite:Radiator_01))
+Declaration(NamedIndividual(satellite:ReactionWheelFault_001))
+Declaration(NamedIndividual(satellite:RegulatorFault_001))
+Declaration(NamedIndividual(satellite:STR_01))
+Declaration(NamedIndividual(satellite:SUN_01))
+Declaration(NamedIndividual(satellite:SafeMode))
+Declaration(NamedIndividual(satellite:SafeMode_01))
+Declaration(NamedIndividual(satellite:SensorFault_001))
+Declaration(NamedIndividual(satellite:SignalLossFault_001))
+Declaration(NamedIndividual(satellite:SolarArray_01))
+Declaration(NamedIndividual(satellite:SolarCell_01))
+Declaration(NamedIndividual(satellite:SolarFault_001))
+Declaration(NamedIndividual(satellite:SolarMount_01))
+Declaration(NamedIndividual(satellite:SolarPanel_01))
+Declaration(NamedIndividual(satellite:SolarTemp_01))
+Declaration(NamedIndividual(satellite:StarTrackerFault_001))
+Declaration(NamedIndividual(satellite:StructuralFailure_001))
+Declaration(NamedIndividual(satellite:Structure_01))
+Declaration(NamedIndividual(satellite:SunSensorFault_001))
+Declaration(NamedIndividual(satellite:Switch_01))
+Declaration(NamedIndividual(satellite:THR_01))
+Declaration(NamedIndividual(satellite:TTCAntennaFault_001))
+Declaration(NamedIndividual(satellite:TTCAntenna_01))
+Declaration(NamedIndividual(satellite:TTCRadioFault_001))
+Declaration(NamedIndividual(satellite:TTCRadio_01))
+Declaration(NamedIndividual(satellite:TTC_01))
+Declaration(NamedIndividual(satellite:TelemetryEncoderFault_001))
+Declaration(NamedIndividual(satellite:TelemetryEncoder_01))
+Declaration(NamedIndividual(satellite:TempSensor_01))
+Declaration(NamedIndividual(satellite:ThermalPath_01))
+Declaration(NamedIndividual(satellite:Thermal_01))
+Declaration(NamedIndividual(satellite:Thermostat_01))
+Declaration(NamedIndividual(satellite:ThrusterFault_001))
+Declaration(NamedIndividual(satellite:TrackingFault_001))
+Declaration(NamedIndividual(satellite:TrackingUnit_01))
+Declaration(NamedIndividual(satellite:UnderheatFault_001))
+Declaration(NamedIndividual(satellite:UpconverterFault_001))
+Declaration(NamedIndividual(satellite:Upconverter_01))
+Declaration(NamedIndividual(satellite:VibrationFailure_001))
+Declaration(NamedIndividual(satellite:VibrationSensor_01))
+Declaration(NamedIndividual(satellite:VoltageReg_01))
+Declaration(NamedIndividual(satellite:Warning))
+Declaration(NamedIndividual(satellite:Warning_01))
+Declaration(AnnotationProperty(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: satellite:affectsComponent (satellite:affectsComponent)
+
+ObjectPropertyDomain(satellite:affectsComponent satellite:Fault)
+ObjectPropertyRange(satellite:affectsComponent satellite:Component)
+
+# Object Property: satellite:belongsToSubsystem (satellite:belongsToSubsystem)
+
+ObjectPropertyDomain(satellite:belongsToSubsystem satellite:Component)
+ObjectPropertyRange(satellite:belongsToSubsystem satellite:Subsystem)
+
+# Object Property: satellite:connectedStructurally (satellite:connectedStructurally)
+
+ObjectPropertyDomain(satellite:connectedStructurally satellite:Component)
+ObjectPropertyRange(satellite:connectedStructurally satellite:Component)
+
+# Object Property: satellite:connectedTo (satellite:connectedTo)
+
+ObjectPropertyDomain(satellite:connectedTo satellite:Component)
+ObjectPropertyRange(satellite:connectedTo satellite:Component)
+
+# Object Property: satellite:controls (satellite:controls)
+
+ObjectPropertyDomain(satellite:controls satellite:OBC_Component)
+ObjectPropertyRange(satellite:controls satellite:Actuator)
+
+# Object Property: satellite:cools (satellite:cools)
+
+ObjectPropertyDomain(satellite:cools satellite:Component)
+ObjectPropertyRange(satellite:cools satellite:Component)
+
+# Object Property: satellite:dependsOn (satellite:dependsOn)
+
+ObjectPropertyDomain(satellite:dependsOn satellite:Component)
+ObjectPropertyRange(satellite:dependsOn satellite:Component)
+
+# Object Property: satellite:distributesPowerTo (satellite:distributesPowerTo)
+
+ObjectPropertyDomain(satellite:distributesPowerTo satellite:Component)
+ObjectPropertyRange(satellite:distributesPowerTo satellite:Component)
+
+# Object Property: satellite:executesCommandFrom (satellite:executesCommandFrom)
+
+ObjectPropertyDomain(satellite:executesCommandFrom satellite:Component)
+ObjectPropertyRange(satellite:executesCommandFrom satellite:Component)
+
+# Object Property: satellite:feedsCommandTo (satellite:feedsCommandTo)
+
+ObjectPropertyDomain(satellite:feedsCommandTo satellite:Component)
+ObjectPropertyRange(satellite:feedsCommandTo satellite:Component)
+
+# Object Property: satellite:feedsDataTo (satellite:feedsDataTo)
+
+ObjectPropertyDomain(satellite:feedsDataTo satellite:Component)
+ObjectPropertyRange(satellite:feedsDataTo satellite:Component)
+
+# Object Property: satellite:feedsPowerTo (satellite:feedsPowerTo)
+
+ObjectPropertyDomain(satellite:feedsPowerTo satellite:Component)
+ObjectPropertyRange(satellite:feedsPowerTo satellite:Component)
+
+# Object Property: satellite:feedsSignalTo (satellite:feedsSignalTo)
+
+ObjectPropertyDomain(satellite:feedsSignalTo satellite:Component)
+ObjectPropertyRange(satellite:feedsSignalTo satellite:Component)
+
+# Object Property: satellite:feedsTelemetryTo (satellite:feedsTelemetryTo)
+
+ObjectPropertyDomain(satellite:feedsTelemetryTo satellite:Component)
+ObjectPropertyRange(satellite:feedsTelemetryTo satellite:Component)
+
+# Object Property: satellite:hasFault (satellite:hasFault)
+
+ObjectPropertyDomain(satellite:hasFault satellite:Component)
+ObjectPropertyRange(satellite:hasFault satellite:Fault)
+
+# Object Property: satellite:heats (satellite:heats)
+
+ObjectPropertyDomain(satellite:heats satellite:Component)
+ObjectPropertyRange(satellite:heats satellite:Component)
+
+# Object Property: satellite:influences (satellite:influences)
+
+ObjectPropertyDomain(satellite:influences satellite:Component)
+ObjectPropertyRange(satellite:influences satellite:Component)
+
+# Object Property: satellite:isolatesVibration (satellite:isolatesVibration)
+
+ObjectPropertyDomain(satellite:isolatesVibration satellite:Component)
+ObjectPropertyRange(satellite:isolatesVibration satellite:Component)
+
+# Object Property: satellite:monitors (satellite:monitors)
+
+ObjectPropertyDomain(satellite:monitors satellite:OBC_Component)
+ObjectPropertyRange(satellite:monitors satellite:Component)
+
+# Object Property: satellite:mountedOn (satellite:mountedOn)
+
+ObjectPropertyDomain(satellite:mountedOn satellite:Component)
+ObjectPropertyRange(satellite:mountedOn satellite:Component)
+
+# Object Property: satellite:physicallySupports (satellite:physicallySupports)
+
+ObjectPropertyDomain(satellite:physicallySupports satellite:Component)
+ObjectPropertyRange(satellite:physicallySupports satellite:Component)
+
+# Object Property: satellite:propagatesTo (satellite:propagatesTo)
+
+ObjectPropertyDomain(satellite:propagatesTo satellite:Fault)
+ObjectPropertyRange(satellite:propagatesTo satellite:Fault)
+
+# Object Property: satellite:protects (satellite:protects)
+
+ObjectPropertyDomain(satellite:protects satellite:Component)
+ObjectPropertyRange(satellite:protects satellite:Component)
+
+# Object Property: satellite:receivesCommandFrom (satellite:receivesCommandFrom)
+
+ObjectPropertyDomain(satellite:receivesCommandFrom satellite:Component)
+ObjectPropertyRange(satellite:receivesCommandFrom satellite:Component)
+
+# Object Property: satellite:receivesTelemetryFrom (satellite:receivesTelemetryFrom)
+
+ObjectPropertyDomain(satellite:receivesTelemetryFrom satellite:OBC_Component)
+ObjectPropertyRange(satellite:receivesTelemetryFrom satellite:Component)
+
+# Object Property: satellite:sendsCommandTo (satellite:sendsCommandTo)
+
+ObjectPropertyDomain(satellite:sendsCommandTo satellite:Component)
+ObjectPropertyRange(satellite:sendsCommandTo satellite:Component)
+
+# Object Property: satellite:sendsTelemetryTo (satellite:sendsTelemetryTo)
+
+ObjectPropertyDomain(satellite:sendsTelemetryTo satellite:Component)
+ObjectPropertyRange(satellite:sendsTelemetryTo satellite:Component)
+
+# Object Property: satellite:suppliesPowerTo (satellite:suppliesPowerTo)
+
+ObjectPropertyDomain(satellite:suppliesPowerTo satellite:Component)
+ObjectPropertyRange(satellite:suppliesPowerTo satellite:Component)
+
+# Object Property: satellite:supports (satellite:supports)
+
+ObjectPropertyDomain(satellite:supports satellite:Component)
+ObjectPropertyRange(satellite:supports satellite:Component)
+
+# Object Property: satellite:supportsStructure (satellite:supportsStructure)
+
+ObjectPropertyDomain(satellite:supportsStructure satellite:Component)
+ObjectPropertyRange(satellite:supportsStructure satellite:Component)
+
+# Object Property: satellite:transfersHeatTo (satellite:transfersHeatTo)
+
+ObjectPropertyDomain(satellite:transfersHeatTo satellite:Component)
+ObjectPropertyRange(satellite:transfersHeatTo satellite:Component)
+
+# Object Property: satellite:triggersAction (satellite:triggersAction)
+
+ObjectPropertyDomain(satellite:triggersAction satellite:Fault)
+ObjectPropertyRange(satellite:triggersAction satellite:Action)
+
+# Object Property: satellite:usesSensorDataFrom (satellite:usesSensorDataFrom)
+
+ObjectPropertyDomain(satellite:usesSensorDataFrom satellite:Component)
+ObjectPropertyRange(satellite:usesSensorDataFrom satellite:Component)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: satellite:hasAngularRate (satellite:hasAngularRate)
+
+DataPropertyDomain(satellite:hasAngularRate satellite:Gyroscope)
+DataPropertyRange(satellite:hasAngularRate xsd:double)
+
+# Data Property: satellite:hasAttitudeError (satellite:hasAttitudeError)
+
+DataPropertyDomain(satellite:hasAttitudeError satellite:AttitudeControl)
+DataPropertyRange(satellite:hasAttitudeError xsd:double)
+
+# Data Property: satellite:hasBandwidth (satellite:hasBandwidth)
+
+DataPropertyDomain(satellite:hasBandwidth satellite:Filter)
+DataPropertyRange(satellite:hasBandwidth xsd:double)
+
+# Data Property: satellite:hasBitErrorRate (satellite:hasBitErrorRate)
+
+DataPropertyDomain(satellite:hasBitErrorRate satellite:Demodulator)
+DataPropertyRange(satellite:hasBitErrorRate xsd:double)
+
+# Data Property: satellite:hasBusVoltage (satellite:hasBusVoltage)
+
+DataPropertyDomain(satellite:hasBusVoltage satellite:PowerBusLine)
+DataPropertyRange(satellite:hasBusVoltage xsd:double)
+
+# Data Property: satellite:hasCarrierFrequency (satellite:hasCarrierFrequency)
+
+DataPropertyDomain(satellite:hasCarrierFrequency satellite:Upconverter)
+DataPropertyRange(satellite:hasCarrierFrequency xsd:double)
+
+# Data Property: satellite:hasChargeLevel (satellite:hasChargeLevel)
+
+DataPropertyDomain(satellite:hasChargeLevel satellite:Battery)
+DataPropertyRange(satellite:hasChargeLevel xsd:double)
+
+# Data Property: satellite:hasChargeRate (satellite:hasChargeRate)
+
+DataPropertyDomain(satellite:hasChargeRate satellite:BatteryChargeController)
+DataPropertyRange(satellite:hasChargeRate xsd:double)
+
+# Data Property: satellite:hasCoolingEfficiency (satellite:hasCoolingEfficiency)
+
+DataPropertyDomain(satellite:hasCoolingEfficiency satellite:Radiator)
+DataPropertyRange(satellite:hasCoolingEfficiency xsd:double)
+
+# Data Property: satellite:hasCycleCount (satellite:hasCycleCount)
+
+DataPropertyDomain(satellite:hasCycleCount satellite:Battery)
+DataPropertyRange(satellite:hasCycleCount xsd:double)
+
+# Data Property: satellite:hasDecodingError (satellite:hasDecodingError)
+
+DataPropertyDomain(satellite:hasDecodingError satellite:Decoder)
+DataPropertyRange(satellite:hasDecodingError xsd:double)
+
+# Data Property: satellite:hasDegradationRate (satellite:hasDegradationRate)
+
+DataPropertyDomain(satellite:hasDegradationRate satellite:SolarPanel)
+DataPropertyRange(satellite:hasDegradationRate xsd:double)
+
+# Data Property: satellite:hasDischargeRate (satellite:hasDischargeRate)
+
+DataPropertyDomain(satellite:hasDischargeRate satellite:Battery)
+DataPropertyRange(satellite:hasDischargeRate xsd:double)
+
+# Data Property: satellite:hasDistributionLoad (satellite:hasDistributionLoad)
+
+DataPropertyDomain(satellite:hasDistributionLoad satellite:PCDU)
+DataPropertyRange(satellite:hasDistributionLoad xsd:double)
+
+# Data Property: satellite:hasEarthVectorError (satellite:hasEarthVectorError)
+
+DataPropertyDomain(satellite:hasEarthVectorError satellite:EarthSensor)
+DataPropertyRange(satellite:hasEarthVectorError xsd:double)
+
+# Data Property: satellite:hasEncodingQuality (satellite:hasEncodingQuality)
+
+DataPropertyDomain(satellite:hasEncodingQuality satellite:TelemetryEncoder)
+DataPropertyRange(satellite:hasEncodingQuality xsd:double)
+
+# Data Property: satellite:hasEncodingRate (satellite:hasEncodingRate)
+
+DataPropertyDomain(satellite:hasEncodingRate satellite:Encoder)
+DataPropertyRange(satellite:hasEncodingRate xsd:double)
+
+# Data Property: satellite:hasFrequencyShift (satellite:hasFrequencyShift)
+
+DataPropertyDomain(satellite:hasFrequencyShift satellite:Downconverter)
+DataPropertyRange(satellite:hasFrequencyShift xsd:double)
+
+# Data Property: satellite:hasFrequencyStability (satellite:hasFrequencyStability)
+
+DataPropertyDomain(satellite:hasFrequencyStability satellite:LocalOscillator)
+DataPropertyRange(satellite:hasFrequencyStability xsd:double)
+
+# Data Property: satellite:hasGain (satellite:hasGain)
+
+DataPropertyDomain(satellite:hasGain satellite:LNA)
+DataPropertyRange(satellite:hasGain xsd:double)
+
+# Data Property: satellite:hasGeneratedPower (satellite:hasGeneratedPower)
+
+DataPropertyDomain(satellite:hasGeneratedPower satellite:SolarArray)
+DataPropertyRange(satellite:hasGeneratedPower xsd:double)
+
+# Data Property: satellite:hasHeatLevel (satellite:hasHeatLevel)
+
+DataPropertyDomain(satellite:hasHeatLevel satellite:Heater)
+DataPropertyRange(satellite:hasHeatLevel xsd:double)
+
+# Data Property: satellite:hasIrradiance (satellite:hasIrradiance)
+
+DataPropertyDomain(satellite:hasIrradiance satellite:SolarArray)
+DataPropertyRange(satellite:hasIrradiance xsd:double)
+
+# Data Property: satellite:hasIsolation (satellite:hasIsolation)
+
+DataPropertyDomain(satellite:hasIsolation satellite:Duplexer)
+DataPropertyRange(satellite:hasIsolation xsd:double)
+
+# Data Property: satellite:hasLinkQuality (satellite:hasLinkQuality)
+
+DataPropertyDomain(satellite:hasLinkQuality satellite:GroundStation)
+DataPropertyRange(satellite:hasLinkQuality xsd:double)
+
+# Data Property: satellite:hasLoadDistributionBalance (satellite:hasLoadDistributionBalance)
+
+DataPropertyDomain(satellite:hasLoadDistributionBalance satellite:PCDU)
+DataPropertyRange(satellite:hasLoadDistributionBalance xsd:double)
+
+# Data Property: satellite:hasMagneticFieldError (satellite:hasMagneticFieldError)
+
+DataPropertyDomain(satellite:hasMagneticFieldError satellite:Magnetometer)
+DataPropertyRange(satellite:hasMagneticFieldError xsd:double)
+
+# Data Property: satellite:hasMagneticMoment (satellite:hasMagneticMoment)
+
+DataPropertyDomain(satellite:hasMagneticMoment satellite:Magnetorquer)
+DataPropertyRange(satellite:hasMagneticMoment xsd:double)
+
+# Data Property: satellite:hasOrbitDeviation (satellite:hasOrbitDeviation)
+
+DataPropertyDomain(satellite:hasOrbitDeviation satellite:OrbitControl)
+DataPropertyRange(satellite:hasOrbitDeviation xsd:double)
+
+# Data Property: satellite:hasOutputPower (satellite:hasOutputPower)
+
+DataPropertyDomain(satellite:hasOutputPower satellite:PowerAmplifier)
+DataPropertyRange(satellite:hasOutputPower xsd:double)
+
+# Data Property: satellite:hasOutputVoltage (satellite:hasOutputVoltage)
+
+DataPropertyDomain(satellite:hasOutputVoltage satellite:PCDU)
+DataPropertyRange(satellite:hasOutputVoltage xsd:double)
+
+# Data Property: satellite:hasPanelEfficiency (satellite:hasPanelEfficiency)
+
+DataPropertyDomain(satellite:hasPanelEfficiency satellite:SolarPanel)
+DataPropertyRange(satellite:hasPanelEfficiency xsd:double)
+
+# Data Property: satellite:hasPointingError (satellite:hasPointingError)
+
+DataPropertyDomain(satellite:hasPointingError satellite:AntennaPointing)
+DataPropertyRange(satellite:hasPointingError xsd:double)
+
+# Data Property: satellite:hasPositionError (satellite:hasPositionError)
+
+DataPropertyDomain(satellite:hasPositionError satellite:GNSSReceiver)
+DataPropertyRange(satellite:hasPositionError xsd:double)
+
+# Data Property: satellite:hasPriority (satellite:hasPriority)
+
+DataPropertyDomain(satellite:hasPriority satellite:Subsystem)
+DataPropertyRange(satellite:hasPriority xsd:string)
+
+# Data Property: satellite:hasRegulatedVoltage (satellite:hasRegulatedVoltage)
+
+DataPropertyDomain(satellite:hasRegulatedVoltage satellite:VoltageRegulator)
+DataPropertyRange(satellite:hasRegulatedVoltage xsd:double)
+
+# Data Property: satellite:hasSensorAccuracy (satellite:hasSensorAccuracy)
+
+DataPropertyDomain(satellite:hasSensorAccuracy satellite:TempSensor)
+DataPropertyRange(satellite:hasSensorAccuracy xsd:double)
+
+# Data Property: satellite:hasSeverity (satellite:hasSeverity)
+
+DataPropertyDomain(satellite:hasSeverity satellite:Fault)
+DataPropertyRange(satellite:hasSeverity xsd:string)
+
+# Data Property: satellite:hasSignalStrength (satellite:hasSignalStrength)
+
+DataPropertyDomain(satellite:hasSignalStrength satellite:Component)
+DataPropertyRange(satellite:hasSignalStrength xsd:double)
+
+# Data Property: satellite:hasSunVectorError (satellite:hasSunVectorError)
+
+DataPropertyDomain(satellite:hasSunVectorError satellite:SunSensor)
+DataPropertyRange(satellite:hasSunVectorError xsd:double)
+
+# Data Property: satellite:hasTemperature (satellite:hasTemperature)
+
+DataPropertyDomain(satellite:hasTemperature satellite:Battery)
+DataPropertyRange(satellite:hasTemperature xsd:double)
+
+# Data Property: satellite:hasTemperatureTele (satellite:hasTemperatureTele)
+
+DataPropertyDomain(satellite:hasTemperatureTele satellite:ThermalSensor)
+DataPropertyRange(satellite:hasTemperatureTele xsd:double)
+
+# Data Property: satellite:hasThrust (satellite:hasThrust)
+
+DataPropertyDomain(satellite:hasThrust satellite:Thruster)
+DataPropertyRange(satellite:hasThrust xsd:double)
+
+# Data Property: satellite:hasTrackingAccuracy (satellite:hasTrackingAccuracy)
+
+DataPropertyDomain(satellite:hasTrackingAccuracy satellite:TrackingUnit)
+DataPropertyRange(satellite:hasTrackingAccuracy xsd:double)
+
+# Data Property: satellite:hasTrackingError (satellite:hasTrackingError)
+
+DataPropertyDomain(satellite:hasTrackingError satellite:StarTracker)
+DataPropertyRange(satellite:hasTrackingError xsd:double)
+
+# Data Property: satellite:hasTransmitPower (satellite:hasTransmitPower)
+
+DataPropertyDomain(satellite:hasTransmitPower satellite:TTCRadio)
+DataPropertyRange(satellite:hasTransmitPower xsd:double)
+
+# Data Property: satellite:hasVibration (satellite:hasVibration)
+
+DataPropertyDomain(satellite:hasVibration satellite:ReactionWheel)
+DataPropertyRange(satellite:hasVibration xsd:double)
+
+# Data Property: satellite:hasVoltageOutput (satellite:hasVoltageOutput)
+
+DataPropertyDomain(satellite:hasVoltageOutput satellite:SolarCell)
+DataPropertyRange(satellite:hasVoltageOutput xsd:double)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: satellite:AOCS (satellite:AOCS)
+
+SubClassOf(satellite:AOCS satellite:Subsystem)
+
+# Class: satellite:Actuator (satellite:Actuator)
+
+SubClassOf(satellite:Actuator satellite:Component)
+
+# Class: satellite:AlignmentFailure (satellite:AlignmentFailure)
+
+SubClassOf(satellite:AlignmentFailure satellite:Fault)
+
+# Class: satellite:AmplifierFault (satellite:AmplifierFault)
+
+SubClassOf(satellite:AmplifierFault satellite:Fault)
+
+# Class: satellite:Antenna (satellite:Antenna)
+
+SubClassOf(satellite:Antenna satellite:Communication_Component)
+
+# Class: satellite:AntennaFault (satellite:AntennaFault)
+
+SubClassOf(satellite:AntennaFault satellite:Fault)
+
+# Class: satellite:AntennaMount (satellite:AntennaMount)
+
+SubClassOf(satellite:AntennaMount satellite:StructureComponent)
+
+# Class: satellite:AntennaPointing (satellite:AntennaPointing)
+
+SubClassOf(satellite:AntennaPointing satellite:Control)
+
+# Class: satellite:AntennaPointingFault (satellite:AntennaPointingFault)
+
+SubClassOf(satellite:AntennaPointingFault satellite:Fault)
+
+# Class: satellite:AttitudeControl (satellite:AttitudeControl)
+
+SubClassOf(satellite:AttitudeControl satellite:Control)
+
+# Class: satellite:AttitudeControlFault (satellite:AttitudeControlFault)
+
+SubClassOf(satellite:AttitudeControlFault satellite:Fault)
+
+# Class: satellite:Battery (satellite:Battery)
+
+SubClassOf(satellite:Battery satellite:Power_Component)
+
+# Class: satellite:BatteryChargeController (satellite:BatteryChargeController)
+
+SubClassOf(satellite:BatteryChargeController satellite:Power_Component)
+
+# Class: satellite:BatteryFault (satellite:BatteryFault)
+
+SubClassOf(satellite:BatteryFault satellite:Fault)
+
+# Class: satellite:BatteryTemp (satellite:BatteryTemp)
+
+SubClassOf(satellite:BatteryTemp satellite:TempSensor)
+
+# Class: satellite:Bracket (satellite:Bracket)
+
+SubClassOf(satellite:Bracket satellite:StructureComponent)
+
+# Class: satellite:BusFault (satellite:BusFault)
+
+SubClassOf(satellite:BusFault satellite:Fault)
+
+# Class: satellite:ChargeControllerFault (satellite:ChargeControllerFault)
+
+SubClassOf(satellite:ChargeControllerFault satellite:Fault)
+
+# Class: satellite:Coating (satellite:Coating)
+
+SubClassOf(satellite:Coating satellite:Thermal_Component)
+
+# Class: satellite:CommandReceiver (satellite:CommandReceiver)
+
+SubClassOf(satellite:CommandReceiver satellite:Communication_Component)
+
+# Class: satellite:CommandReceiverFault (satellite:CommandReceiverFault)
+
+SubClassOf(satellite:CommandReceiverFault satellite:Fault)
+
+# Class: satellite:CommunicationSystem (satellite:CommunicationSystem)
+
+SubClassOf(satellite:CommunicationSystem satellite:Subsystem)
+
+# Class: satellite:Communication_Component (satellite:Communication_Component)
+
+SubClassOf(satellite:Communication_Component satellite:Component)
+
+# Class: satellite:Control (satellite:Control)
+
+SubClassOf(satellite:Control satellite:Component)
+
+# Class: satellite:CriticalPowerFailure (satellite:CriticalPowerFailure)
+
+SubClassOf(satellite:CriticalPowerFailure satellite:Fault)
+
+# Class: satellite:Decoder (satellite:Decoder)
+
+SubClassOf(satellite:Decoder satellite:Communication_Component)
+
+# Class: satellite:DecoderFault (satellite:DecoderFault)
+
+SubClassOf(satellite:DecoderFault satellite:Fault)
+
+# Class: satellite:Demodulator (satellite:Demodulator)
+
+SubClassOf(satellite:Demodulator satellite:Communication_Component)
+
+# Class: satellite:DemodulatorFault (satellite:DemodulatorFault)
+
+SubClassOf(satellite:DemodulatorFault satellite:Fault)
+
+# Class: satellite:DeploymentFailure (satellite:DeploymentFailure)
+
+SubClassOf(satellite:DeploymentFailure satellite:Fault)
+
+# Class: satellite:DeploymentMechanism (satellite:DeploymentMechanism)
+
+SubClassOf(satellite:DeploymentMechanism satellite:Actuator)
+
+# Class: satellite:DeploymentSwitch (satellite:DeploymentSwitch)
+
+SubClassOf(satellite:DeploymentSwitch satellite:Sensor)
+
+# Class: satellite:Downconverter (satellite:Downconverter)
+
+SubClassOf(satellite:Downconverter satellite:Communication_Component)
+
+# Class: satellite:DownconverterFault (satellite:DownconverterFault)
+
+SubClassOf(satellite:DownconverterFault satellite:Fault)
+
+# Class: satellite:Duplexer (satellite:Duplexer)
+
+SubClassOf(satellite:Duplexer satellite:Communication_Component)
+
+# Class: satellite:DuplexerFault (satellite:DuplexerFault)
+
+SubClassOf(satellite:DuplexerFault satellite:Fault)
+
+# Class: satellite:EarthSensor (satellite:EarthSensor)
+
+SubClassOf(satellite:EarthSensor satellite:Sensor)
+
+# Class: satellite:EarthSensorFault (satellite:EarthSensorFault)
+
+SubClassOf(satellite:EarthSensorFault satellite:Fault)
+
+# Class: satellite:Encoder (satellite:Encoder)
+
+SubClassOf(satellite:Encoder satellite:Communication_Component)
+
+# Class: satellite:EncoderFault (satellite:EncoderFault)
+
+SubClassOf(satellite:EncoderFault satellite:Fault)
+
+# Class: satellite:Filter (satellite:Filter)
+
+SubClassOf(satellite:Filter satellite:Communication_Component)
+
+# Class: satellite:FilterFault (satellite:FilterFault)
+
+SubClassOf(satellite:FilterFault satellite:Fault)
+
+# Class: satellite:GNSSFault (satellite:GNSSFault)
+
+SubClassOf(satellite:GNSSFault satellite:Fault)
+
+# Class: satellite:GNSSReceiver (satellite:GNSSReceiver)
+
+SubClassOf(satellite:GNSSReceiver satellite:Sensor)
+
+# Class: satellite:GroundLinkFault (satellite:GroundLinkFault)
+
+SubClassOf(satellite:GroundLinkFault satellite:Fault)
+
+# Class: satellite:GyroFault (satellite:GyroFault)
+
+SubClassOf(satellite:GyroFault satellite:Fault)
+
+# Class: satellite:Gyroscope (satellite:Gyroscope)
+
+SubClassOf(satellite:Gyroscope satellite:Sensor)
+
+# Class: satellite:HealthyComponent (satellite:HealthyComponent)
+
+SubClassOf(satellite:HealthyComponent satellite:Component)
+
+# Class: satellite:Heater (satellite:Heater)
+
+SubClassOf(satellite:Heater satellite:Actuator)
+
+# Class: satellite:HeaterFault (satellite:HeaterFault)
+
+SubClassOf(satellite:HeaterFault satellite:Fault)
+
+# Class: satellite:Hinge (satellite:Hinge)
+
+SubClassOf(satellite:Hinge satellite:StructureComponent)
+
+# Class: satellite:LNA (satellite:LNA)
+
+SubClassOf(satellite:LNA satellite:Communication_Component)
+
+# Class: satellite:LNAFault (satellite:LNAFault)
+
+SubClassOf(satellite:LNAFault satellite:Fault)
+
+# Class: satellite:LOFault (satellite:LOFault)
+
+SubClassOf(satellite:LOFault satellite:Fault)
+
+# Class: satellite:LocalOscillator (satellite:LocalOscillator)
+
+SubClassOf(satellite:LocalOscillator satellite:Communication_Component)
+
+# Class: satellite:MLILayer (satellite:MLILayer)
+
+SubClassOf(satellite:MLILayer satellite:Thermal_Component)
+
+# Class: satellite:Magnetometer (satellite:Magnetometer)
+
+SubClassOf(satellite:Magnetometer satellite:Sensor)
+
+# Class: satellite:MagnetometerFault (satellite:MagnetometerFault)
+
+SubClassOf(satellite:MagnetometerFault satellite:Fault)
+
+# Class: satellite:Magnetorquer (satellite:Magnetorquer)
+
+SubClassOf(satellite:Magnetorquer satellite:Actuator)
+
+# Class: satellite:MagnetorquerFault (satellite:MagnetorquerFault)
+
+SubClassOf(satellite:MagnetorquerFault satellite:Fault)
+
+# Class: satellite:Mount (satellite:Mount)
+
+SubClassOf(satellite:Mount satellite:StructureComponent)
+
+# Class: satellite:MountFailure (satellite:MountFailure)
+
+SubClassOf(satellite:MountFailure satellite:Fault)
+
+# Class: satellite:OBC (satellite:OBC)
+
+SubClassOf(satellite:OBC satellite:Subsystem)
+
+# Class: satellite:OBCTemp (satellite:OBCTemp)
+
+SubClassOf(satellite:OBCTemp satellite:TempSensor)
+
+# Class: satellite:OBC_Component (satellite:OBC_Component)
+
+SubClassOf(satellite:OBC_Component satellite:Component)
+
+# Class: satellite:OnBoardComputer (satellite:OnBoardComputer)
+
+SubClassOf(satellite:OnBoardComputer satellite:OBC_Component)
+
+# Class: satellite:OrbitControl (satellite:OrbitControl)
+
+SubClassOf(satellite:OrbitControl satellite:Control)
+
+# Class: satellite:OrbitControlFault (satellite:OrbitControlFault)
+
+SubClassOf(satellite:OrbitControlFault satellite:Fault)
+
+# Class: satellite:OverheatFault (satellite:OverheatFault)
+
+SubClassOf(satellite:OverheatFault satellite:Fault)
+
+# Class: satellite:PCDU (satellite:PCDU)
+
+SubClassOf(satellite:PCDU satellite:Power_Component)
+
+# Class: satellite:PCDUFault (satellite:PCDUFault)
+
+SubClassOf(satellite:PCDUFault satellite:Fault)
+
+# Class: satellite:Panel (satellite:Panel)
+
+SubClassOf(satellite:Panel satellite:StructureComponent)
+
+# Class: satellite:PositionFeedback (satellite:PositionFeedback)
+
+SubClassOf(satellite:PositionFeedback satellite:Sensor)
+
+# Class: satellite:PowerAmplifier (satellite:PowerAmplifier)
+
+SubClassOf(satellite:PowerAmplifier satellite:Communication_Component)
+
+# Class: satellite:PowerBusLine (satellite:PowerBusLine)
+
+SubClassOf(satellite:PowerBusLine satellite:Power_Component)
+
+# Class: satellite:PowerSystem (satellite:PowerSystem)
+
+SubClassOf(satellite:PowerSystem satellite:Subsystem)
+
+# Class: satellite:Power_Component (satellite:Power_Component)
+
+SubClassOf(satellite:Power_Component satellite:Component)
+
+# Class: satellite:RFTemp (satellite:RFTemp)
+
+SubClassOf(satellite:RFTemp satellite:TempSensor)
+
+# Class: satellite:Radiator (satellite:Radiator)
+
+SubClassOf(satellite:Radiator satellite:Thermal_Component)
+
+# Class: satellite:ReactionWheel (satellite:ReactionWheel)
+
+SubClassOf(satellite:ReactionWheel satellite:Actuator)
+
+# Class: satellite:ReactionWheelFault (satellite:ReactionWheelFault)
+
+SubClassOf(satellite:ReactionWheelFault satellite:Fault)
+
+# Class: satellite:RegulatorFault (satellite:RegulatorFault)
+
+SubClassOf(satellite:RegulatorFault satellite:Fault)
+
+# Class: satellite:SatelliteFrame (satellite:SatelliteFrame)
+
+SubClassOf(satellite:SatelliteFrame satellite:StructureComponent)
+
+# Class: satellite:Sensor (satellite:Sensor)
+
+SubClassOf(satellite:Sensor satellite:Component)
+
+# Class: satellite:SensorFault (satellite:SensorFault)
+
+SubClassOf(satellite:SensorFault satellite:Fault)
+
+# Class: satellite:SignalLossFault (satellite:SignalLossFault)
+
+SubClassOf(satellite:SignalLossFault satellite:Fault)
+
+# Class: satellite:SolarArray (satellite:SolarArray)
+
+SubClassOf(satellite:SolarArray satellite:Power_Component)
+
+# Class: satellite:SolarCell (satellite:SolarCell)
+
+SubClassOf(satellite:SolarCell satellite:Power_Component)
+
+# Class: satellite:SolarFault (satellite:SolarFault)
+
+SubClassOf(satellite:SolarFault satellite:Fault)
+
+# Class: satellite:SolarPanel (satellite:SolarPanel)
+
+SubClassOf(satellite:SolarPanel satellite:Power_Component)
+
+# Class: satellite:SolarPanelMount (satellite:SolarPanelMount)
+
+SubClassOf(satellite:SolarPanelMount satellite:StructureComponent)
+
+# Class: satellite:SolarPanelTemp (satellite:SolarPanelTemp)
+
+SubClassOf(satellite:SolarPanelTemp satellite:TempSensor)
+
+# Class: satellite:StarTracker (satellite:StarTracker)
+
+SubClassOf(satellite:StarTracker satellite:Sensor)
+
+# Class: satellite:StarTrackerFault (satellite:StarTrackerFault)
+
+SubClassOf(satellite:StarTrackerFault satellite:Fault)
+
+# Class: satellite:StructuralFailure (satellite:StructuralFailure)
+
+SubClassOf(satellite:StructuralFailure satellite:Fault)
+
+# Class: satellite:StructureComponent (satellite:StructureComponent)
+
+SubClassOf(satellite:StructureComponent satellite:Component)
+
+# Class: satellite:StructureSubsystem (satellite:StructureSubsystem)
+
+SubClassOf(satellite:StructureSubsystem satellite:Subsystem)
+
+# Class: satellite:SunSensor (satellite:SunSensor)
+
+SubClassOf(satellite:SunSensor satellite:Sensor)
+
+# Class: satellite:SunSensorFault (satellite:SunSensorFault)
+
+SubClassOf(satellite:SunSensorFault satellite:Fault)
+
+# Class: satellite:TTCAntenna (satellite:TTCAntenna)
+
+SubClassOf(satellite:TTCAntenna satellite:Communication_Component)
+
+# Class: satellite:TTCAntennaFault (satellite:TTCAntennaFault)
+
+SubClassOf(satellite:TTCAntennaFault satellite:Fault)
+
+# Class: satellite:TTCRadio (satellite:TTCRadio)
+
+SubClassOf(satellite:TTCRadio satellite:Communication_Component)
+
+# Class: satellite:TTCRadioFault (satellite:TTCRadioFault)
+
+SubClassOf(satellite:TTCRadioFault satellite:Fault)
+
+# Class: satellite:TelemetryEncoder (satellite:TelemetryEncoder)
+
+SubClassOf(satellite:TelemetryEncoder satellite:Communication_Component)
+
+# Class: satellite:TelemetryEncoderFault (satellite:TelemetryEncoderFault)
+
+SubClassOf(satellite:TelemetryEncoderFault satellite:Fault)
+
+# Class: satellite:TempSensor (satellite:TempSensor)
+
+SubClassOf(satellite:TempSensor satellite:Sensor)
+
+# Class: satellite:ThermalPath (satellite:ThermalPath)
+
+SubClassOf(satellite:ThermalPath satellite:Thermal_Component)
+
+# Class: satellite:ThermalSensor (satellite:ThermalSensor)
+
+SubClassOf(satellite:ThermalSensor satellite:Thermal_Component)
+
+# Class: satellite:ThermalSystem (satellite:ThermalSystem)
+
+SubClassOf(satellite:ThermalSystem satellite:Subsystem)
+
+# Class: satellite:Thermal_Component (satellite:Thermal_Component)
+
+SubClassOf(satellite:Thermal_Component satellite:Component)
+
+# Class: satellite:Thermostat (satellite:Thermostat)
+
+SubClassOf(satellite:Thermostat satellite:Control)
+
+# Class: satellite:Thruster (satellite:Thruster)
+
+SubClassOf(satellite:Thruster satellite:Actuator)
+
+# Class: satellite:ThrusterFault (satellite:ThrusterFault)
+
+SubClassOf(satellite:ThrusterFault satellite:Fault)
+
+# Class: satellite:TrackingFault (satellite:TrackingFault)
+
+SubClassOf(satellite:TrackingFault satellite:Fault)
+
+# Class: satellite:TrackingUnit (satellite:TrackingUnit)
+
+SubClassOf(satellite:TrackingUnit satellite:Communication_Component)
+
+# Class: satellite:Transmitter (satellite:Transmitter)
+
+SubClassOf(satellite:Transmitter satellite:Communication_Component)
+
+# Class: satellite:UnderheatFault (satellite:UnderheatFault)
+
+SubClassOf(satellite:UnderheatFault satellite:Fault)
+
+# Class: satellite:Upconverter (satellite:Upconverter)
+
+SubClassOf(satellite:Upconverter satellite:Communication_Component)
+
+# Class: satellite:UpconverterFault (satellite:UpconverterFault)
+
+SubClassOf(satellite:UpconverterFault satellite:Fault)
+
+# Class: satellite:VibrationFailure (satellite:VibrationFailure)
+
+SubClassOf(satellite:VibrationFailure satellite:Fault)
+
+# Class: satellite:VibrationIsolation (satellite:VibrationIsolation)
+
+SubClassOf(satellite:VibrationIsolation satellite:StructureComponent)
+
+# Class: satellite:VibrationSensor (satellite:VibrationSensor)
+
+SubClassOf(satellite:VibrationSensor satellite:Sensor)
+
+# Class: satellite:VoltageRegulator (satellite:VoltageRegulator)
+
+SubClassOf(satellite:VoltageRegulator satellite:Power_Component)
+
+
+############################
+#   Named Individuals
+############################
+
+# Individual: satellite:AC_01 (satellite:AC_01)
+
+ClassAssertion(satellite:AttitudeControl satellite:AC_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:AC_01 satellite:AOCS_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:AC_01 satellite:GYRO_01)
+ObjectPropertyAssertion(satellite:sendsCommandTo satellite:AC_01 satellite:RW_01)
+DataPropertyAssertion(satellite:hasAttitudeError satellite:AC_01 "12.0"^^xsd:double)
+
+# Individual: satellite:ANT_01 (satellite:ANT_01)
+
+ClassAssertion(satellite:AntennaPointing satellite:ANT_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:ANT_01 satellite:AOCS_01)
+DataPropertyAssertion(satellite:hasPointingError satellite:ANT_01 "5.0"^^xsd:double)
+
+# Individual: satellite:AOCS_01 (satellite:AOCS_01)
+
+ClassAssertion(satellite:AOCS satellite:AOCS_01)
+DataPropertyAssertion(satellite:hasPriority satellite:AOCS_01 "HIGH")
+
+# Individual: satellite:AlignmentFailure_001 (satellite:AlignmentFailure_001)
+
+ClassAssertion(satellite:AlignmentFailure satellite:AlignmentFailure_001)
+
+# Individual: satellite:AmplifierFault_001 (satellite:AmplifierFault_001)
+
+ClassAssertion(satellite:AmplifierFault satellite:AmplifierFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:AmplifierFault_001 "HIGH")
+
+# Individual: satellite:AntennaFault_001 (satellite:AntennaFault_001)
+
+ClassAssertion(satellite:AntennaFault satellite:AntennaFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:AntennaFault_001 "HIGH")
+
+# Individual: satellite:AntennaMount_01 (satellite:AntennaMount_01)
+
+ClassAssertion(satellite:AntennaMount satellite:AntennaMount_01)
+ObjectPropertyAssertion(satellite:mountedOn satellite:AntennaMount_01 satellite:Panel_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:AntennaMount_01 satellite:Antenna_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:AntennaMount_01 satellite:TTCAntenna_01)
+
+# Individual: satellite:AntennaPointingFault_001 (satellite:AntennaPointingFault_001)
+
+ClassAssertion(satellite:AntennaPointingFault satellite:AntennaPointingFault_001)
+
+# Individual: satellite:Antenna_01 (satellite:Antenna_01)
+
+ClassAssertion(satellite:Antenna satellite:Antenna_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:Antenna_01 satellite:Comm_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:Antenna_01 satellite:AntennaMount_01)
+ObjectPropertyAssertion(satellite:feedsSignalTo satellite:Antenna_01 satellite:LNA_01)
+DataPropertyAssertion(satellite:hasSignalStrength satellite:Antenna_01 "10.0"^^xsd:double)
+
+# Individual: satellite:AttitudeControlFault_001 (satellite:AttitudeControlFault_001)
+
+ClassAssertion(satellite:AttitudeControlFault satellite:AttitudeControlFault_001)
+
+# Individual: satellite:BCC_01 (satellite:BCC_01)
+
+ClassAssertion(satellite:BatteryChargeController satellite:BCC_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:BCC_01 satellite:Power_01)
+DataPropertyAssertion(satellite:hasChargeRate satellite:BCC_01 "0.0"^^xsd:double)
+
+# Individual: satellite:BatteryFault_001 (satellite:BatteryFault_001)
+
+ClassAssertion(satellite:BatteryFault satellite:BatteryFault_001)
+ObjectPropertyAssertion(satellite:propagatesTo satellite:BatteryFault_001 satellite:PCDUFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:BatteryFault_001 "HIGH")
+
+# Individual: satellite:BatteryTemp_01 (satellite:BatteryTemp_01)
+
+ClassAssertion(satellite:BatteryTemp satellite:BatteryTemp_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:BatteryTemp_01 satellite:Thermal_01)
+DataPropertyAssertion(satellite:hasTemperature satellite:BatteryTemp_01 "90.0"^^xsd:double)
+
+# Individual: satellite:Battery_01 (satellite:Battery_01)
+
+ClassAssertion(satellite:Battery satellite:Battery_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:Battery_01 satellite:Power_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:Battery_01 satellite:Frame_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:Battery_01 satellite:SolarArray_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:Battery_01 satellite:PCDU_01)
+DataPropertyAssertion(satellite:hasChargeLevel satellite:Battery_01 "15.0"^^xsd:double)
+DataPropertyAssertion(satellite:hasCycleCount satellite:Battery_01 "2850.0"^^xsd:double)
+DataPropertyAssertion(satellite:hasDischargeRate satellite:Battery_01 "25.0"^^xsd:double)
+DataPropertyAssertion(satellite:hasTemperature satellite:Battery_01 "55.0"^^xsd:double)
+
+# Individual: satellite:Bracket_01 (satellite:Bracket_01)
+
+ClassAssertion(satellite:Bracket satellite:Bracket_01)
+
+# Individual: satellite:BusFault_001 (satellite:BusFault_001)
+
+ClassAssertion(satellite:BusFault satellite:BusFault_001)
+ObjectPropertyAssertion(satellite:propagatesTo satellite:BusFault_001 satellite:RegulatorFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:BusFault_001 "HIGH")
+
+# Individual: satellite:BusLine_01 (satellite:BusLine_01)
+
+ClassAssertion(satellite:PowerBusLine satellite:BusLine_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:BusLine_01 satellite:Power_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:BusLine_01 satellite:PCDU_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:BusLine_01 satellite:VoltageReg_01)
+DataPropertyAssertion(satellite:hasBusVoltage satellite:BusLine_01 "10.0"^^xsd:double)
+
+# Individual: satellite:ChargeControllerFault_001 (satellite:ChargeControllerFault_001)
+
+ClassAssertion(satellite:ChargeControllerFault satellite:ChargeControllerFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:ChargeControllerFault_001 "HIGH")
+
+# Individual: satellite:Coating_01 (satellite:Coating_01)
+
+ClassAssertion(satellite:Coating satellite:Coating_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:Coating_01 satellite:Thermal_01)
+ObjectPropertyAssertion(satellite:protects satellite:Coating_01 satellite:SolarArray_01)
+
+# Individual: satellite:Comm_01 (satellite:Comm_01)
+
+ClassAssertion(satellite:CommunicationSystem satellite:Comm_01)
+DataPropertyAssertion(satellite:hasPriority satellite:Comm_01 "MEDIUM")
+
+# Individual: satellite:CommandReceiverFault_001 (satellite:CommandReceiverFault_001)
+
+ClassAssertion(satellite:CommandReceiverFault satellite:CommandReceiverFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:CommandReceiverFault_001 "HIGH")
+
+# Individual: satellite:CommandReceiver_01 (satellite:CommandReceiver_01)
+
+ClassAssertion(satellite:CommandReceiver satellite:CommandReceiver_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:CommandReceiver_01 satellite:TTC_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:CommandReceiver_01 satellite:TTCAntenna_01)
+ObjectPropertyAssertion(satellite:feedsCommandTo satellite:CommandReceiver_01 satellite:Decoder_01)
+DataPropertyAssertion(satellite:hasSignalStrength satellite:CommandReceiver_01 "10.0"^^xsd:double)
+
+# Individual: satellite:DecoderFault_001 (satellite:DecoderFault_001)
+
+ClassAssertion(satellite:DecoderFault satellite:DecoderFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:DecoderFault_001 "MEDIUM")
+
+# Individual: satellite:Decoder_01 (satellite:Decoder_01)
+
+ClassAssertion(satellite:Decoder satellite:Decoder_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:Decoder_01 satellite:TTC_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:Decoder_01 satellite:CommandReceiver_01)
+ObjectPropertyAssertion(satellite:feedsCommandTo satellite:Decoder_01 satellite:TrackingUnit_01)
+DataPropertyAssertion(satellite:hasDecodingError satellite:Decoder_01 "0.2"^^xsd:double)
+
+# Individual: satellite:DemodulatorFault_001 (satellite:DemodulatorFault_001)
+
+ClassAssertion(satellite:DemodulatorFault satellite:DemodulatorFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:DemodulatorFault_001 "HIGH")
+
+# Individual: satellite:Demodulator_01 (satellite:Demodulator_01)
+
+ClassAssertion(satellite:Demodulator satellite:Demodulator_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:Demodulator_01 satellite:Comm_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:Demodulator_01 satellite:Downconverter_01)
+ObjectPropertyAssertion(satellite:feedsSignalTo satellite:Demodulator_01 satellite:OBC_01)
+DataPropertyAssertion(satellite:hasBitErrorRate satellite:Demodulator_01 "0.2"^^xsd:double)
+
+# Individual: satellite:DeploymentFailure_001 (satellite:DeploymentFailure_001)
+
+ClassAssertion(satellite:DeploymentFailure satellite:DeploymentFailure_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:DeploymentFailure_001 "MEDIUM")
+
+# Individual: satellite:Deployment_01 (satellite:Deployment_01)
+
+ClassAssertion(satellite:DeploymentMechanism satellite:Deployment_01)
+
+# Individual: satellite:DownconverterFault_001 (satellite:DownconverterFault_001)
+
+ClassAssertion(satellite:DownconverterFault satellite:DownconverterFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:DownconverterFault_001 "MEDIUM")
+
+# Individual: satellite:Downconverter_01 (satellite:Downconverter_01)
+
+ClassAssertion(satellite:Downconverter satellite:Downconverter_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:Downconverter_01 satellite:Comm_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:Downconverter_01 satellite:Filter_01)
+ObjectPropertyAssertion(satellite:feedsSignalTo satellite:Downconverter_01 satellite:Demodulator_01)
+DataPropertyAssertion(satellite:hasFrequencyShift satellite:Downconverter_01 "0.0"^^xsd:double)
+
+# Individual: satellite:DuplexerFault_001 (satellite:DuplexerFault_001)
+
+ClassAssertion(satellite:DuplexerFault satellite:DuplexerFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:DuplexerFault_001 "MEDIUM")
+
+# Individual: satellite:Duplexer_01 (satellite:Duplexer_01)
+
+ClassAssertion(satellite:Duplexer satellite:Duplexer_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:Duplexer_01 satellite:Comm_01)
+ObjectPropertyAssertion(satellite:connectedTo satellite:Duplexer_01 satellite:Antenna_01)
+DataPropertyAssertion(satellite:hasIsolation satellite:Duplexer_01 "5.0"^^xsd:double)
+
+# Individual: satellite:EARTH_01 (satellite:EARTH_01)
+
+ClassAssertion(satellite:EarthSensor satellite:EARTH_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:EARTH_01 satellite:AOCS_01)
+DataPropertyAssertion(satellite:hasEarthVectorError satellite:EARTH_01 "2.0"^^xsd:double)
+
+# Individual: satellite:EarthSensorFault_001 (satellite:EarthSensorFault_001)
+
+ClassAssertion(satellite:EarthSensorFault satellite:EarthSensorFault_001)
+
+# Individual: satellite:EncoderFault_001 (satellite:EncoderFault_001)
+
+ClassAssertion(satellite:EncoderFault satellite:EncoderFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:EncoderFault_001 "MEDIUM")
+
+# Individual: satellite:Encoder_01 (satellite:Encoder_01)
+
+ClassAssertion(satellite:Encoder satellite:Encoder_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:Encoder_01 satellite:Comm_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:Encoder_01 satellite:Upconverter_01)
+ObjectPropertyAssertion(satellite:feedsSignalTo satellite:Encoder_01 satellite:Upconverter_01)
+DataPropertyAssertion(satellite:hasEncodingRate satellite:Encoder_01 "0.0"^^xsd:double)
+
+# Individual: satellite:FilterFault_001 (satellite:FilterFault_001)
+
+ClassAssertion(satellite:FilterFault satellite:FilterFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:FilterFault_001 "MEDIUM")
+
+# Individual: satellite:Filter_01 (satellite:Filter_01)
+
+ClassAssertion(satellite:Filter satellite:Filter_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:Filter_01 satellite:Comm_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:Filter_01 satellite:LNA_01)
+ObjectPropertyAssertion(satellite:feedsSignalTo satellite:Filter_01 satellite:Downconverter_01)
+DataPropertyAssertion(satellite:hasBandwidth satellite:Filter_01 "1.0"^^xsd:double)
+
+# Individual: satellite:Frame_01 (satellite:Frame_01)
+
+ClassAssertion(satellite:SatelliteFrame satellite:Frame_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:AC_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:ANT_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:Antenna_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:BCC_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:Battery_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:BusLine_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:CommandReceiver_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:Decoder_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:Demodulator_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:Downconverter_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:Duplexer_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:EARTH_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:Encoder_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:Filter_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:GNSS_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:GYRO_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:GroundStation_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:Heater_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:LNA_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:LO_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:MAG_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:MLI_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:MTQ_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:OBC_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:ORB_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:PCDU_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:PowerAmp_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:RW_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:Radiator_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:STR_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:SUN_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:SolarArray_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:SolarCell_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:SolarPanel_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:THR_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:TTCAntenna_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:TTCRadio_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:TelemetryEncoder_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:TempSensor_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:Thermostat_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:TrackingUnit_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:Upconverter_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:Frame_01 satellite:VoltageReg_01)
+
+# Individual: satellite:GNSSFault_001 (satellite:GNSSFault_001)
+
+ClassAssertion(satellite:GNSSFault satellite:GNSSFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:GNSSFault_001 "HIGH")
+
+# Individual: satellite:GNSS_01 (satellite:GNSS_01)
+
+ClassAssertion(satellite:GNSSReceiver satellite:GNSS_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:GNSS_01 satellite:AOCS_01)
+ObjectPropertyAssertion(satellite:feedsDataTo satellite:GNSS_01 satellite:ORB_01)
+DataPropertyAssertion(satellite:hasPositionError satellite:GNSS_01 "50.0"^^xsd:double)
+
+# Individual: satellite:GYRO_01 (satellite:GYRO_01)
+
+ClassAssertion(satellite:Gyroscope satellite:GYRO_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:GYRO_01 satellite:AOCS_01)
+ObjectPropertyAssertion(satellite:feedsDataTo satellite:GYRO_01 satellite:AC_01)
+ObjectPropertyAssertion(satellite:influences satellite:GYRO_01 satellite:AC_01)
+DataPropertyAssertion(satellite:hasAngularRate satellite:GYRO_01 "15.0"^^xsd:double)
+
+# Individual: satellite:GroundLinkFault_001 (satellite:GroundLinkFault_001)
+
+ClassAssertion(satellite:GroundLinkFault satellite:GroundLinkFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:GroundLinkFault_001 "HIGH")
+
+# Individual: satellite:GroundStation_01 (satellite:GroundStation_01)
+
+ClassAssertion(satellite:GroundStation satellite:GroundStation_01)
+ObjectPropertyAssertion(satellite:feedsCommandTo satellite:GroundStation_01 satellite:TTCAntenna_01)
+DataPropertyAssertion(satellite:hasLinkQuality satellite:GroundStation_01 "0.3"^^xsd:double)
+
+# Individual: satellite:GyroFault_001 (satellite:GyroFault_001)
+
+ClassAssertion(satellite:GyroFault satellite:GyroFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:GyroFault_001 "HIGH")
+
+# Individual: satellite:HeaterFault_001 (satellite:HeaterFault_001)
+
+ClassAssertion(satellite:HeaterFault satellite:HeaterFault_001)
+
+# Individual: satellite:HeaterON_01 (satellite:HeaterON_01)
+
+ClassAssertion(satellite:Action satellite:HeaterON_01)
+
+# Individual: satellite:Heater_01 (satellite:Heater_01)
+
+ClassAssertion(satellite:Heater satellite:Heater_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:Heater_01 satellite:Thermal_01)
+ObjectPropertyAssertion(satellite:heats satellite:Heater_01 satellite:Battery_01)
+DataPropertyAssertion(satellite:hasHeatLevel satellite:Heater_01 "0.0"^^xsd:double)
+
+# Individual: satellite:Hinge_01 (satellite:Hinge_01)
+
+ClassAssertion(satellite:Hinge satellite:Hinge_01)
+
+# Individual: satellite:Isolation_01 (satellite:Isolation_01)
+
+ClassAssertion(satellite:VibrationIsolation satellite:Isolation_01)
+ObjectPropertyAssertion(satellite:isolatesVibration satellite:Isolation_01 satellite:Frame_01)
+ObjectPropertyAssertion(satellite:isolatesVibration satellite:Isolation_01 satellite:RW_01)
+
+# Individual: satellite:LNAFault_001 (satellite:LNAFault_001)
+
+ClassAssertion(satellite:LNAFault satellite:LNAFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:LNAFault_001 "HIGH")
+
+# Individual: satellite:LNA_01 (satellite:LNA_01)
+
+ClassAssertion(satellite:LNA satellite:LNA_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:LNA_01 satellite:Comm_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:LNA_01 satellite:Antenna_01)
+ObjectPropertyAssertion(satellite:feedsSignalTo satellite:LNA_01 satellite:Filter_01)
+DataPropertyAssertion(satellite:hasGain satellite:LNA_01 "5.0"^^xsd:double)
+
+# Individual: satellite:LOFault_001 (satellite:LOFault_001)
+
+ClassAssertion(satellite:LOFault satellite:LOFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:LOFault_001 "MEDIUM")
+
+# Individual: satellite:LO_01 (satellite:LO_01)
+
+ClassAssertion(satellite:LocalOscillator satellite:LO_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:LO_01 satellite:Comm_01)
+ObjectPropertyAssertion(satellite:supports satellite:LO_01 satellite:Downconverter_01)
+ObjectPropertyAssertion(satellite:supports satellite:LO_01 satellite:Upconverter_01)
+DataPropertyAssertion(satellite:hasFrequencyStability satellite:LO_01 "0.1"^^xsd:double)
+
+# Individual: satellite:MAG_01 (satellite:MAG_01)
+
+ClassAssertion(satellite:Magnetometer satellite:MAG_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:MAG_01 satellite:AOCS_01)
+DataPropertyAssertion(satellite:hasMagneticFieldError satellite:MAG_01 "0.0"^^xsd:double)
+
+# Individual: satellite:MLI_01 (satellite:MLI_01)
+
+ClassAssertion(satellite:MLILayer satellite:MLI_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:MLI_01 satellite:Thermal_01)
+ObjectPropertyAssertion(satellite:protects satellite:MLI_01 satellite:Battery_01)
+
+# Individual: satellite:MTQ_01 (satellite:MTQ_01)
+
+ClassAssertion(satellite:Magnetorquer satellite:MTQ_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:MTQ_01 satellite:AOCS_01)
+DataPropertyAssertion(satellite:hasMagneticMoment satellite:MTQ_01 "0.0"^^xsd:double)
+
+# Individual: satellite:MagnetometerFault_001 (satellite:MagnetometerFault_001)
+
+ClassAssertion(satellite:MagnetometerFault satellite:MagnetometerFault_001)
+
+# Individual: satellite:MagnetorquerFault_001 (satellite:MagnetorquerFault_001)
+
+ClassAssertion(satellite:MagnetorquerFault satellite:MagnetorquerFault_001)
+
+# Individual: satellite:MountFailure_001 (satellite:MountFailure_001)
+
+ClassAssertion(satellite:MountFailure satellite:MountFailure_001)
+
+# Individual: satellite:Mount_01 (satellite:Mount_01)
+
+ClassAssertion(satellite:Mount satellite:Mount_01)
+
+# Individual: satellite:OBCTemp_01 (satellite:OBCTemp_01)
+
+ClassAssertion(satellite:OBCTemp satellite:OBCTemp_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:OBCTemp_01 satellite:Thermal_01)
+DataPropertyAssertion(satellite:hasTemperature satellite:OBCTemp_01 "95.0"^^xsd:double)
+
+# Individual: satellite:OBC_01 (satellite:OBC_01)
+
+ClassAssertion(satellite:OnBoardComputer satellite:OBC_01)
+ObjectPropertyAssertion(satellite:controls satellite:OBC_01 satellite:Deployment_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:OBC_01 satellite:TrackingUnit_01)
+ObjectPropertyAssertion(satellite:feedsSignalTo satellite:OBC_01 satellite:Encoder_01)
+ObjectPropertyAssertion(satellite:feedsTelemetryTo satellite:OBC_01 satellite:TelemetryEncoder_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:AC_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:ANT_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:Antenna_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:BCC_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:BatteryTemp_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:Battery_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:BusLine_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:Coating_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:Demodulator_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:Downconverter_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:Duplexer_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:EARTH_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:Encoder_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:Filter_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:GNSS_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:GYRO_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:Heater_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:LNA_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:LO_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:MAG_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:MLI_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:MTQ_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:OBCTemp_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:ORB_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:PCDU_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:PositionSensor_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:PowerAmp_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:RFTemp_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:RW_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:Radiator_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:STR_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:SUN_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:SolarArray_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:SolarCell_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:SolarPanel_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:SolarTemp_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:Switch_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:THR_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:TempSensor_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:ThermalPath_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:Thermostat_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:Upconverter_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:VibrationSensor_01)
+ObjectPropertyAssertion(satellite:monitors satellite:OBC_01 satellite:VoltageReg_01)
+ObjectPropertyAssertion(satellite:receivesCommandFrom satellite:OBC_01 satellite:TrackingUnit_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:AC_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:ANT_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:Antenna_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:BCC_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:BatteryTemp_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:Battery_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:BusLine_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:Coating_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:Demodulator_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:Downconverter_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:Duplexer_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:EARTH_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:Encoder_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:Filter_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:GNSS_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:GYRO_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:Heater_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:LNA_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:LO_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:MAG_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:MLI_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:MTQ_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:OBCTemp_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:ORB_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:PCDU_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:PositionSensor_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:PowerAmp_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:RFTemp_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:RW_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:Radiator_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:STR_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:SUN_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:SolarArray_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:SolarCell_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:SolarPanel_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:SolarTemp_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:Switch_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:THR_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:TempSensor_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:ThermalPath_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:Thermostat_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:Upconverter_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:VibrationSensor_01)
+ObjectPropertyAssertion(satellite:receivesTelemetryFrom satellite:OBC_01 satellite:VoltageReg_01)
+ObjectPropertyAssertion(satellite:sendsTelemetryTo satellite:OBC_01 satellite:TelemetryEncoder_01)
+
+# Individual: satellite:ORB_01 (satellite:ORB_01)
+
+ClassAssertion(satellite:OrbitControl satellite:ORB_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:ORB_01 satellite:AOCS_01)
+DataPropertyAssertion(satellite:hasOrbitDeviation satellite:ORB_01 "3.0"^^xsd:double)
+
+# Individual: satellite:OrbitControlFault_001 (satellite:OrbitControlFault_001)
+
+ClassAssertion(satellite:OrbitControlFault satellite:OrbitControlFault_001)
+
+# Individual: satellite:OverheatFault_001 (satellite:OverheatFault_001)
+
+ClassAssertion(satellite:OverheatFault satellite:OverheatFault_001)
+ObjectPropertyAssertion(satellite:affectsComponent satellite:OverheatFault_001 satellite:OBC_01)
+ObjectPropertyAssertion(satellite:affectsComponent satellite:OverheatFault_001 satellite:PowerAmp_01)
+ObjectPropertyAssertion(satellite:affectsComponent satellite:OverheatFault_001 satellite:VoltageReg_01)
+
+# Individual: satellite:PCDUFault_001 (satellite:PCDUFault_001)
+
+ClassAssertion(satellite:PCDUFault satellite:PCDUFault_001)
+ObjectPropertyAssertion(satellite:propagatesTo satellite:PCDUFault_001 satellite:BusFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:PCDUFault_001 "HIGH")
+
+# Individual: satellite:PCDU_01 (satellite:PCDU_01)
+
+ClassAssertion(satellite:PCDU satellite:PCDU_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:PCDU_01 satellite:Power_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:PCDU_01 satellite:Battery_01)
+ObjectPropertyAssertion(satellite:distributesPowerTo satellite:PCDU_01 satellite:BusLine_01)
+DataPropertyAssertion(satellite:hasDistributionLoad satellite:PCDU_01 "95.0"^^xsd:double)
+DataPropertyAssertion(satellite:hasLoadDistributionBalance satellite:PCDU_01 "0.92"^^xsd:double)
+DataPropertyAssertion(satellite:hasOutputVoltage satellite:PCDU_01 "18.0"^^xsd:double)
+
+# Individual: satellite:Panel_01 (satellite:Panel_01)
+
+ClassAssertion(satellite:Panel satellite:Panel_01)
+ObjectPropertyAssertion(satellite:mountedOn satellite:Panel_01 satellite:Frame_01)
+
+# Individual: satellite:PositionSensor_01 (satellite:PositionSensor_01)
+
+ClassAssertion(satellite:PositionFeedback satellite:PositionSensor_01)
+
+# Individual: satellite:PowerAmp_01 (satellite:PowerAmp_01)
+
+ClassAssertion(satellite:PowerAmplifier satellite:PowerAmp_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:PowerAmp_01 satellite:Comm_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:PowerAmp_01 satellite:Antenna_01)
+ObjectPropertyAssertion(satellite:feedsSignalTo satellite:PowerAmp_01 satellite:Antenna_01)
+ObjectPropertyAssertion(satellite:feedsSignalTo satellite:PowerAmp_01 satellite:TTCAntenna_01)
+DataPropertyAssertion(satellite:hasOutputPower satellite:PowerAmp_01 "2.0"^^xsd:double)
+
+# Individual: satellite:PowerSaveMode (satellite:PowerSaveMode)
+
+ClassAssertion(satellite:Action satellite:PowerSaveMode)
+
+# Individual: satellite:Power_01 (satellite:Power_01)
+
+ClassAssertion(satellite:PowerSystem satellite:Power_01)
+DataPropertyAssertion(satellite:hasSeverity satellite:Power_01 "HIGH")
+
+# Individual: satellite:RFTemp_01 (satellite:RFTemp_01)
+
+ClassAssertion(satellite:RFTemp satellite:RFTemp_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:RFTemp_01 satellite:Thermal_01)
+DataPropertyAssertion(satellite:hasTemperature satellite:RFTemp_01 "100.0"^^xsd:double)
+
+# Individual: satellite:RW_01 (satellite:RW_01)
+
+ClassAssertion(satellite:ReactionWheel satellite:RW_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:RW_01 satellite:AOCS_01)
+DataPropertyAssertion(satellite:hasVibration satellite:RW_01 "7.0"^^xsd:double)
+
+# Individual: satellite:Radiator_01 (satellite:Radiator_01)
+
+ClassAssertion(satellite:Radiator satellite:Radiator_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:Radiator_01 satellite:Thermal_01)
+ObjectPropertyAssertion(satellite:cools satellite:Radiator_01 satellite:OBC_01)
+ObjectPropertyAssertion(satellite:cools satellite:Radiator_01 satellite:PowerAmp_01)
+DataPropertyAssertion(satellite:hasCoolingEfficiency satellite:Radiator_01 "0.3"^^xsd:double)
+
+# Individual: satellite:ReactionWheelFault_001 (satellite:ReactionWheelFault_001)
+
+ClassAssertion(satellite:ReactionWheelFault satellite:ReactionWheelFault_001)
+
+# Individual: satellite:RegulatorFault_001 (satellite:RegulatorFault_001)
+
+ClassAssertion(satellite:RegulatorFault satellite:RegulatorFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:RegulatorFault_001 "HIGH")
+
+# Individual: satellite:STR_01 (satellite:STR_01)
+
+ClassAssertion(satellite:StarTracker satellite:STR_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:STR_01 satellite:AOCS_01)
+ObjectPropertyAssertion(satellite:feedsDataTo satellite:STR_01 satellite:AC_01)
+DataPropertyAssertion(satellite:hasTrackingError satellite:STR_01 "2.0"^^xsd:double)
+
+# Individual: satellite:SUN_01 (satellite:SUN_01)
+
+ClassAssertion(satellite:SunSensor satellite:SUN_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:SUN_01 satellite:AOCS_01)
+DataPropertyAssertion(satellite:hasSunVectorError satellite:SUN_01 "1.5"^^xsd:double)
+
+# Individual: satellite:SafeMode (satellite:SafeMode)
+
+ClassAssertion(satellite:Action satellite:SafeMode)
+
+# Individual: satellite:SafeMode_01 (satellite:SafeMode_01)
+
+ClassAssertion(satellite:Action satellite:SafeMode_01)
+
+# Individual: satellite:SensorFault_001 (satellite:SensorFault_001)
+
+ClassAssertion(satellite:SensorFault satellite:SensorFault_001)
+
+# Individual: satellite:SignalLossFault_001 (satellite:SignalLossFault_001)
+
+ClassAssertion(satellite:SignalLossFault satellite:SignalLossFault_001)
+
+# Individual: satellite:SolarArray_01 (satellite:SolarArray_01)
+
+ClassAssertion(satellite:SolarArray satellite:SolarArray_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:SolarArray_01 satellite:Power_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:SolarArray_01 satellite:SolarMount_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:SolarArray_01 satellite:SolarPanel_01)
+ObjectPropertyAssertion(satellite:feedsPowerTo satellite:SolarArray_01 satellite:Battery_01)
+DataPropertyAssertion(satellite:hasGeneratedPower satellite:SolarArray_01 "50.0"^^xsd:double)
+DataPropertyAssertion(satellite:hasIrradiance satellite:SolarArray_01 "1100.0"^^xsd:double)
+
+# Individual: satellite:SolarCell_01 (satellite:SolarCell_01)
+
+ClassAssertion(satellite:SolarCell satellite:SolarCell_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:SolarCell_01 satellite:Power_01)
+ObjectPropertyAssertion(satellite:feedsPowerTo satellite:SolarCell_01 satellite:SolarPanel_01)
+DataPropertyAssertion(satellite:hasVoltageOutput satellite:SolarCell_01 "0.2"^^xsd:double)
+
+# Individual: satellite:SolarFault_001 (satellite:SolarFault_001)
+
+ClassAssertion(satellite:SolarFault satellite:SolarFault_001)
+ObjectPropertyAssertion(satellite:propagatesTo satellite:SolarFault_001 satellite:BatteryFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:SolarFault_001 "MEDIUM")
+
+# Individual: satellite:SolarMount_01 (satellite:SolarMount_01)
+
+ClassAssertion(satellite:SolarPanelMount satellite:SolarMount_01)
+ObjectPropertyAssertion(satellite:mountedOn satellite:SolarMount_01 satellite:Frame_01)
+ObjectPropertyAssertion(satellite:physicallySupports satellite:SolarMount_01 satellite:SolarArray_01)
+
+# Individual: satellite:SolarPanel_01 (satellite:SolarPanel_01)
+
+ClassAssertion(satellite:SolarPanel satellite:SolarPanel_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:SolarPanel_01 satellite:Power_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:SolarPanel_01 satellite:SolarCell_01)
+ObjectPropertyAssertion(satellite:feedsPowerTo satellite:SolarPanel_01 satellite:SolarArray_01)
+DataPropertyAssertion(satellite:hasDegradationRate satellite:SolarPanel_01 "0.85"^^xsd:double)
+DataPropertyAssertion(satellite:hasPanelEfficiency satellite:SolarPanel_01 "40.0"^^xsd:double)
+
+# Individual: satellite:SolarTemp_01 (satellite:SolarTemp_01)
+
+ClassAssertion(satellite:SolarPanelTemp satellite:SolarTemp_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:SolarTemp_01 satellite:Thermal_01)
+DataPropertyAssertion(satellite:hasTemperature satellite:SolarTemp_01 "110.0"^^xsd:double)
+
+# Individual: satellite:StarTrackerFault_001 (satellite:StarTrackerFault_001)
+
+ClassAssertion(satellite:StarTrackerFault satellite:StarTrackerFault_001)
+
+# Individual: satellite:StructuralFailure_001 (satellite:StructuralFailure_001)
+
+ClassAssertion(satellite:StructuralFailure satellite:StructuralFailure_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:StructuralFailure_001 "HIGH")
+
+# Individual: satellite:Structure_01 (satellite:Structure_01)
+
+ClassAssertion(satellite:StructureSubsystem satellite:Structure_01)
+
+# Individual: satellite:SunSensorFault_001 (satellite:SunSensorFault_001)
+
+ClassAssertion(satellite:SunSensorFault satellite:SunSensorFault_001)
+
+# Individual: satellite:Switch_01 (satellite:Switch_01)
+
+ClassAssertion(satellite:DeploymentSwitch satellite:Switch_01)
+
+# Individual: satellite:THR_01 (satellite:THR_01)
+
+ClassAssertion(satellite:Thruster satellite:THR_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:THR_01 satellite:AOCS_01)
+DataPropertyAssertion(satellite:hasThrust satellite:THR_01 "0.0"^^xsd:double)
+
+# Individual: satellite:TTCAntennaFault_001 (satellite:TTCAntennaFault_001)
+
+ClassAssertion(satellite:TTCAntennaFault satellite:TTCAntennaFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:TTCAntennaFault_001 "MEDIUM")
+
+# Individual: satellite:TTCAntenna_01 (satellite:TTCAntenna_01)
+
+ClassAssertion(satellite:TTCAntenna satellite:TTCAntenna_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:TTCAntenna_01 satellite:TTC_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:TTCAntenna_01 satellite:AntennaMount_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:TTCAntenna_01 satellite:GroundStation_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:TTCAntenna_01 satellite:TTCRadio_01)
+ObjectPropertyAssertion(satellite:feedsCommandTo satellite:TTCAntenna_01 satellite:CommandReceiver_01)
+ObjectPropertyAssertion(satellite:feedsSignalTo satellite:TTCAntenna_01 satellite:LNA_01)
+ObjectPropertyAssertion(satellite:feedsTelemetryTo satellite:TTCAntenna_01 satellite:GroundStation_01)
+DataPropertyAssertion(satellite:hasSignalStrength satellite:TTCAntenna_01 "15.0"^^xsd:double)
+
+# Individual: satellite:TTCRadioFault_001 (satellite:TTCRadioFault_001)
+
+ClassAssertion(satellite:TTCRadioFault satellite:TTCRadioFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:TTCRadioFault_001 "HIGH")
+
+# Individual: satellite:TTCRadio_01 (satellite:TTCRadio_01)
+
+ClassAssertion(satellite:TTCRadio satellite:TTCRadio_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:TTCRadio_01 satellite:TTC_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:TTCRadio_01 satellite:TelemetryEncoder_01)
+ObjectPropertyAssertion(satellite:feedsTelemetryTo satellite:TTCRadio_01 satellite:TTCAntenna_01)
+DataPropertyAssertion(satellite:hasTransmitPower satellite:TTCRadio_01 "2.0"^^xsd:double)
+
+# Individual: satellite:TTC_01 (satellite:TTC_01)
+
+ClassAssertion(satellite:CommunicationSystem satellite:TTC_01)
+
+# Individual: satellite:TelemetryEncoderFault_001 (satellite:TelemetryEncoderFault_001)
+
+ClassAssertion(satellite:TelemetryEncoderFault satellite:TelemetryEncoderFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:TelemetryEncoderFault_001 "MEDIUM")
+
+# Individual: satellite:TelemetryEncoder_01 (satellite:TelemetryEncoder_01)
+
+ClassAssertion(satellite:TelemetryEncoder satellite:TelemetryEncoder_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:TelemetryEncoder_01 satellite:TTC_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:TelemetryEncoder_01 satellite:OBC_01)
+ObjectPropertyAssertion(satellite:feedsTelemetryTo satellite:TelemetryEncoder_01 satellite:TTCRadio_01)
+DataPropertyAssertion(satellite:hasEncodingQuality satellite:TelemetryEncoder_01 "0.0"^^xsd:double)
+
+# Individual: satellite:TempSensor_01 (satellite:TempSensor_01)
+
+ClassAssertion(satellite:TempSensor satellite:TempSensor_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:TempSensor_01 satellite:Thermal_01)
+ObjectPropertyAssertion(satellite:monitors satellite:TempSensor_01 satellite:Battery_01)
+ObjectPropertyAssertion(satellite:monitors satellite:TempSensor_01 satellite:OBC_01)
+ObjectPropertyAssertion(satellite:monitors satellite:TempSensor_01 satellite:PowerAmp_01)
+DataPropertyAssertion(satellite:hasSensorAccuracy satellite:TempSensor_01 "0.4"^^xsd:double)
+DataPropertyAssertion(satellite:hasTemperature satellite:TempSensor_01 "120.0"^^xsd:double)
+
+# Individual: satellite:ThermalPath_01 (satellite:ThermalPath_01)
+
+ClassAssertion(satellite:ThermalPath satellite:ThermalPath_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:ThermalPath_01 satellite:Thermal_01)
+ObjectPropertyAssertion(satellite:transfersHeatTo satellite:ThermalPath_01 satellite:Radiator_01)
+
+# Individual: satellite:Thermal_01 (satellite:Thermal_01)
+
+ClassAssertion(satellite:ThermalSystem satellite:Thermal_01)
+
+# Individual: satellite:Thermostat_01 (satellite:Thermostat_01)
+
+ClassAssertion(satellite:Thermostat satellite:Thermostat_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:Thermostat_01 satellite:Thermal_01)
+ObjectPropertyAssertion(satellite:controls satellite:Thermostat_01 satellite:Heater_01)
+
+# Individual: satellite:ThrusterFault_001 (satellite:ThrusterFault_001)
+
+ClassAssertion(satellite:ThrusterFault satellite:ThrusterFault_001)
+
+# Individual: satellite:TrackingFault_001 (satellite:TrackingFault_001)
+
+ClassAssertion(satellite:TrackingFault satellite:TrackingFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:TrackingFault_001 "MEDIUM")
+
+# Individual: satellite:TrackingUnit_01 (satellite:TrackingUnit_01)
+
+ClassAssertion(satellite:TrackingUnit satellite:TrackingUnit_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:TrackingUnit_01 satellite:TTC_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:TrackingUnit_01 satellite:Decoder_01)
+ObjectPropertyAssertion(satellite:feedsCommandTo satellite:TrackingUnit_01 satellite:OBC_01)
+DataPropertyAssertion(satellite:hasTrackingAccuracy satellite:TrackingUnit_01 "0.5"^^xsd:double)
+
+# Individual: satellite:UnderheatFault_001 (satellite:UnderheatFault_001)
+
+ClassAssertion(satellite:UnderheatFault satellite:UnderheatFault_001)
+
+# Individual: satellite:UpconverterFault_001 (satellite:UpconverterFault_001)
+
+ClassAssertion(satellite:UpconverterFault satellite:UpconverterFault_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:UpconverterFault_001 "MEDIUM")
+
+# Individual: satellite:Upconverter_01 (satellite:Upconverter_01)
+
+ClassAssertion(satellite:Upconverter satellite:Upconverter_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:Upconverter_01 satellite:Comm_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:Upconverter_01 satellite:PowerAmp_01)
+ObjectPropertyAssertion(satellite:feedsSignalTo satellite:Upconverter_01 satellite:PowerAmp_01)
+DataPropertyAssertion(satellite:hasCarrierFrequency satellite:Upconverter_01 "0.0"^^xsd:double)
+
+# Individual: satellite:VibrationFailure_001 (satellite:VibrationFailure_001)
+
+ClassAssertion(satellite:VibrationFailure satellite:VibrationFailure_001)
+DataPropertyAssertion(satellite:hasSeverity satellite:VibrationFailure_001 "MEDIUM")
+
+# Individual: satellite:VibrationSensor_01 (satellite:VibrationSensor_01)
+
+ClassAssertion(satellite:VibrationSensor satellite:VibrationSensor_01)
+
+# Individual: satellite:VoltageReg_01 (satellite:VoltageReg_01)
+
+ClassAssertion(satellite:VoltageRegulator satellite:VoltageReg_01)
+ObjectPropertyAssertion(satellite:belongsToSubsystem satellite:VoltageReg_01 satellite:Power_01)
+ObjectPropertyAssertion(satellite:dependsOn satellite:VoltageReg_01 satellite:BusLine_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:AC_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:ANT_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:Antenna_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:BatteryTemp_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:Coating_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:CommandReceiver_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:Decoder_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:Demodulator_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:Downconverter_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:Duplexer_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:EARTH_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:Encoder_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:Filter_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:GNSS_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:GYRO_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:Heater_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:LNA_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:LO_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:MAG_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:MLI_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:MTQ_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:OBCTemp_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:ORB_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:PowerAmp_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:RFTemp_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:RW_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:Radiator_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:STR_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:SUN_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:SolarTemp_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:THR_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:TTCAntenna_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:TTCRadio_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:TelemetryEncoder_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:TempSensor_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:ThermalPath_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:Thermostat_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:TrackingUnit_01)
+ObjectPropertyAssertion(satellite:suppliesPowerTo satellite:VoltageReg_01 satellite:Upconverter_01)
+DataPropertyAssertion(satellite:hasRegulatedVoltage satellite:VoltageReg_01 "3.0"^^xsd:double)
+
+# Individual: satellite:Warning (satellite:Warning)
+
+ClassAssertion(satellite:Action satellite:Warning)
+
+# Individual: satellite:Warning_01 (satellite:Warning_01)
+
+ClassAssertion(satellite:Action satellite:Warning_01)
+
+
+DLSafeRule(Body(BuiltInAtom(swrlb:lessThan Variable(satellite:v) "20.0"^^xsd:double) DataPropertyAtom(satellite:hasSignalStrength Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:Antenna Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:AntennaFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:AntennaPointing Variable(satellite:c)) BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "3.0"^^xsd:double) DataPropertyAtom(satellite:hasPointingError Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:AntennaPointingFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:AttitudeControl Variable(satellite:c)) BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "10.0"^^xsd:double) DataPropertyAtom(satellite:hasAttitudeError Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:AttitudeControlFault_001)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasChargeLevel Variable(satellite:c) Variable(satellite:v)) BuiltInAtom(swrlb:lessThan Variable(satellite:v) "20.0"^^xsd:double) ClassAtom(satellite:Battery Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:BatteryFault_001)))
+DLSafeRule(Body(BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "5000.0"^^xsd:double) DataPropertyAtom(satellite:hasCycleCount Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:Battery Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:BatteryFault_001)))
+DLSafeRule(Body(BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "40.0"^^xsd:double) ClassAtom(satellite:Battery Variable(satellite:c)) DataPropertyAtom(satellite:hasDischargeRate Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:BatteryFault_001)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasTemperature Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:Battery Variable(satellite:c)) BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "50.0"^^xsd:double))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:BatteryFault_001)))
+DLSafeRule(Body(BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "60.0"^^xsd:double) DataPropertyAtom(satellite:hasTemperature Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:Battery Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:BatteryFault_001)))
+DLSafeRule(Body(BuiltInAtom(swrlb:equal Variable(satellite:v) "0.0"^^xsd:double) ClassAtom(satellite:BatteryChargeController Variable(satellite:c)) DataPropertyAtom(satellite:hasChargeRate Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:ChargeControllerFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:CommandReceiver Variable(satellite:c)) BuiltInAtom(swrlb:lessThan Variable(satellite:v) "20.0"^^xsd:double) DataPropertyAtom(satellite:hasSignalStrength Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:CommandReceiverFault_001)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasTemperature Variable(satellite:c) Variable(satellite:v)) BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "100.0"^^xsd:double) ClassAtom(satellite:Component Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:OverheatFault_001)))
+DLSafeRule(Body(BuiltInAtom(swrlb:lessThan Variable(satellite:v) "0.0"^^xsd:double) DataPropertyAtom(satellite:hasTemperature Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:Component Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:UnderheatFault_001)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasDecodingError Variable(satellite:c) Variable(satellite:v)) BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "0.1"^^xsd:double) ClassAtom(satellite:Decoder Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:DecoderFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:Demodulator Variable(satellite:c)) DataPropertyAtom(satellite:hasBitErrorRate Variable(satellite:c) Variable(satellite:v)) BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "0.1"^^xsd:double))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:DemodulatorFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:DeploymentFailure Variable(satellite:f)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:triggersAction Variable(satellite:f) satellite:Warning_01)))
+DLSafeRule(Body(ClassAtom(satellite:Downconverter Variable(satellite:c)) BuiltInAtom(swrlb:equal Variable(satellite:v) "0.0"^^xsd:double) DataPropertyAtom(satellite:hasFrequencyShift Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:DownconverterFault_001)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasIsolation Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:Duplexer Variable(satellite:c)) BuiltInAtom(swrlb:lessThan Variable(satellite:v) "10.0"^^xsd:double))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:DuplexerFault_001)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasEarthVectorError Variable(satellite:c) Variable(satellite:v)) BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "1.0"^^xsd:double) ClassAtom(satellite:EarthSensor Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:EarthSensorFault_001)))
+DLSafeRule(Body(BuiltInAtom(swrlb:equal Variable(satellite:v) "0.0"^^xsd:double) ClassAtom(satellite:Encoder Variable(satellite:c)) DataPropertyAtom(satellite:hasEncodingRate Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:EncoderFault_001)))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "S76") Body(ClassAtom(satellite:Fault Variable(satellite:f)) DataPropertyAtom(satellite:hasSeverity Variable(satellite:f) Variable(satellite:lowSev)) BuiltInAtom(swrlb:equal Variable(satellite:lowSev) "LOW"))Head(ObjectPropertyAtom(satellite:triggersAction Variable(satellite:f) satellite:Warning_01)))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "S73") Body(ClassAtom(satellite:Fault Variable(satellite:f)) DataPropertyAtom(satellite:hasSeverity Variable(satellite:f) Variable(satellite:mediumSev)) BuiltInAtom(swrlb:equal Variable(satellite:mediumSev) "MEDIUM"))Head(ObjectPropertyAtom(satellite:triggersAction Variable(satellite:f) satellite:PowerSaveMode)))
+DLSafeRule(Annotation(<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean) Annotation(rdfs:comment "") Annotation(rdfs:label "S34") Body(BuiltInAtom(swrlb:equal Variable(satellite:s) "HIGH") ClassAtom(satellite:Fault Variable(satellite:f2)) DataPropertyAtom(satellite:hasSeverity Variable(satellite:f2) Variable(satellite:s)))Head(ObjectPropertyAtom(satellite:triggersAction Variable(satellite:f2) satellite:SafeMode)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasBandwidth Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:Filter Variable(satellite:c)) BuiltInAtom(swrlb:lessThan Variable(satellite:v) "2.0"^^xsd:double))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:FilterFault_001)))
+DLSafeRule(Body(BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "20.0"^^xsd:double) ClassAtom(satellite:GNSSReceiver Variable(satellite:c)) DataPropertyAtom(satellite:hasPositionError Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:GNSSFault_001)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasLinkQuality Variable(satellite:c) Variable(satellite:v)) BuiltInAtom(swrlb:lessThan Variable(satellite:v) "0.5"^^xsd:double) ClassAtom(satellite:GroundStation Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:GroundLinkFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:Gyroscope Variable(satellite:c)) BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "10.0"^^xsd:double) DataPropertyAtom(satellite:hasAngularRate Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:GyroFault_001)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasHeatLevel Variable(satellite:c) Variable(satellite:v)) BuiltInAtom(swrlb:equal Variable(satellite:v) "0.0"^^xsd:double) ClassAtom(satellite:Heater Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:HeaterFault_001)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasGain Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:LNA Variable(satellite:c)) BuiltInAtom(swrlb:lessThan Variable(satellite:v) "10.0"^^xsd:double))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:LNAFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:LocalOscillator Variable(satellite:c)) DataPropertyAtom(satellite:hasFrequencyStability Variable(satellite:c) Variable(satellite:v)) BuiltInAtom(swrlb:lessThan Variable(satellite:v) "1.0"^^xsd:double))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:LOFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:Magnetometer Variable(satellite:c)) BuiltInAtom(swrlb:equal Variable(satellite:v) "0.0"^^xsd:double) DataPropertyAtom(satellite:hasMagneticFieldError Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:MagnetometerFault_001)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasMagneticMoment Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:Magnetorquer Variable(satellite:c)) BuiltInAtom(swrlb:equal Variable(satellite:v) "0.0"^^xsd:double))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:MagnetorquerFault_001)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasOrbitDeviation Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:OrbitControl Variable(satellite:c)) BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "2.0"^^xsd:double))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:OrbitControlFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:OverheatFault Variable(satellite:f)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:triggersAction Variable(satellite:f) satellite:SafeMode_01)))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:monitors Variable(satellite:x) Variable(satellite:y)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)) ClassAtom(satellite:OverheatFault Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) Variable(satellite:f))))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasDistributionLoad Variable(satellite:c) Variable(satellite:v)) BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "90.0"^^xsd:double) ClassAtom(satellite:PCDU Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:PCDUFault_001)))
+DLSafeRule(Body(BuiltInAtom(swrlb:lessThan Variable(satellite:v) "0.5"^^xsd:double) ClassAtom(satellite:PCDU Variable(satellite:c)) DataPropertyAtom(satellite:hasLoadDistributionBalance Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:PCDUFault_001)))
+DLSafeRule(Body(BuiltInAtom(swrlb:lessThan Variable(satellite:v) "20.0"^^xsd:double) DataPropertyAtom(satellite:hasOutputVoltage Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:PCDU Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:PCDUFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:PowerAmplifier Variable(satellite:c)) BuiltInAtom(swrlb:lessThan Variable(satellite:v) "5.0"^^xsd:double) DataPropertyAtom(satellite:hasOutputPower Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:AmplifierFault_001)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasBusVoltage Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:PowerBusLine Variable(satellite:c)) BuiltInAtom(swrlb:lessThan Variable(satellite:v) "28.0"^^xsd:double))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:BusFault_001)))
+DLSafeRule(Body(BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "5.0"^^xsd:double) ClassAtom(satellite:ReactionWheel Variable(satellite:c)) DataPropertyAtom(satellite:hasVibration Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:ReactionWheelFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:SensorFault Variable(satellite:f)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:triggersAction Variable(satellite:f) satellite:Warning_01)))
+DLSafeRule(Body(BuiltInAtom(swrlb:lessThan Variable(satellite:v) "100.0"^^xsd:double) ClassAtom(satellite:SolarArray Variable(satellite:c)) DataPropertyAtom(satellite:hasGeneratedPower Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:SolarFault_001)))
+DLSafeRule(Body(BuiltInAtom(swrlb:lessThan Variable(satellite:v) "800.0"^^xsd:double) DataPropertyAtom(satellite:hasIrradiance Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:SolarArray Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:SolarFault_001)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasDegradationRate Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:SolarPanel Variable(satellite:c)) BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "0.95"^^xsd:double))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:SolarFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:StarTracker Variable(satellite:c)) DataPropertyAtom(satellite:hasTrackingError Variable(satellite:c) Variable(satellite:v)) BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "1.0"^^xsd:double))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:StarTrackerFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:StructuralFailure Variable(satellite:f)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:triggersAction Variable(satellite:f) satellite:SafeMode_01)))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)) ClassAtom(satellite:StructuralFailure Variable(satellite:f)) ObjectPropertyAtom(satellite:physicallySupports Variable(satellite:x) Variable(satellite:y)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) Variable(satellite:f))))
+DLSafeRule(Body(ClassAtom(satellite:SunSensor Variable(satellite:c)) BuiltInAtom(swrlb:greaterThan Variable(satellite:v) "1.0"^^xsd:double) DataPropertyAtom(satellite:hasSunVectorError Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:SunSensorFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:TTCAntenna Variable(satellite:c)) BuiltInAtom(swrlb:lessThan Variable(satellite:v) "20.0"^^xsd:double) DataPropertyAtom(satellite:hasSignalStrength Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:TTCAntennaFault_001)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasTransmitPower Variable(satellite:c) Variable(satellite:v)) BuiltInAtom(swrlb:lessThan Variable(satellite:v) "5.0"^^xsd:double) ClassAtom(satellite:TTCRadio Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:TTCRadioFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:TelemetryEncoder Variable(satellite:c)) DataPropertyAtom(satellite:hasEncodingQuality Variable(satellite:c) Variable(satellite:v)) BuiltInAtom(swrlb:equal Variable(satellite:v) "0.0"^^xsd:double))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:TelemetryEncoderFault_001)))
+DLSafeRule(Body(BuiltInAtom(swrlb:lessThan Variable(satellite:v) "0.5"^^xsd:double) DataPropertyAtom(satellite:hasSensorAccuracy Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:TempSensor Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:SensorFault_001)))
+DLSafeRule(Body(BuiltInAtom(swrlb:equal Variable(satellite:v) "0.0"^^xsd:double) DataPropertyAtom(satellite:hasThrust Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:Thruster Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:ThrusterFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:TrackingUnit Variable(satellite:c)) BuiltInAtom(swrlb:lessThan Variable(satellite:v) "0.8"^^xsd:double) DataPropertyAtom(satellite:hasTrackingAccuracy Variable(satellite:c) Variable(satellite:v)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:TrackingFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:UnderheatFault Variable(satellite:f)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:triggersAction Variable(satellite:f) satellite:HeaterON_01)))
+DLSafeRule(Body(BuiltInAtom(swrlb:equal Variable(satellite:v) "0.0"^^xsd:double) DataPropertyAtom(satellite:hasCarrierFrequency Variable(satellite:c) Variable(satellite:v)) ClassAtom(satellite:Upconverter Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:UpconverterFault_001)))
+DLSafeRule(Body(ClassAtom(satellite:VibrationFailure Variable(satellite:f)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:triggersAction Variable(satellite:f) satellite:Warning_01)))
+DLSafeRule(Body(DataPropertyAtom(satellite:hasRegulatedVoltage Variable(satellite:c) Variable(satellite:v)) BuiltInAtom(swrlb:lessThan Variable(satellite:v) "5.0"^^xsd:double) ClassAtom(satellite:VoltageRegulator Variable(satellite:c)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) satellite:RegulatorFault_001)))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:affectsComponent satellite:OverheatFault_001 Variable(satellite:y)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) satellite:OverheatFault_001))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) satellite:OverheatFault_001)))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:belongsToSubsystem Variable(satellite:x) satellite:TTC_01) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:hasFault satellite:Comm_01 Variable(satellite:f))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:connectedTo Variable(satellite:x) Variable(satellite:y)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) Variable(satellite:f))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:cools Variable(satellite:x) Variable(satellite:y)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) Variable(satellite:f))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:hasFault Variable(satellite:solar) satellite:SolarFault_001) ObjectPropertyAtom(satellite:hasFault Variable(satellite:battery) satellite:BatteryFault_001) ObjectPropertyAtom(satellite:dependsOn Variable(satellite:battery) Variable(satellite:solar)))Head(ClassAtom(satellite:CriticalPowerFailure Variable(satellite:battery))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:dependsOn Variable(satellite:y) Variable(satellite:x)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) Variable(satellite:f))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:hasFault Variable(satellite:x3) Variable(satellite:f3)) ObjectPropertyAtom(satellite:dependsOn Variable(satellite:y3) Variable(satellite:x3)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y3) Variable(satellite:f3))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:hasFault Variable(satellite:antTtcRule) satellite:GroundLinkFault_001) ObjectPropertyAtom(satellite:feedsCommandTo Variable(satellite:antTtcRule) Variable(satellite:recTtcRule)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:recTtcRule) satellite:GroundLinkFault_001)))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:hasFault Variable(satellite:gs) satellite:GroundLinkFault_001) ObjectPropertyAtom(satellite:feedsCommandTo Variable(satellite:gs) Variable(satellite:antTtcRule)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:antTtcRule) satellite:GroundLinkFault_001)))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:feedsCommandTo Variable(satellite:x) Variable(satellite:y)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) Variable(satellite:f))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:feedsDataTo Variable(satellite:sensor) Variable(satellite:control)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:sensor) Variable(satellite:fprop)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:control) Variable(satellite:fprop))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:feedsSignalTo Variable(satellite:x) Variable(satellite:y)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) Variable(satellite:f))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:feedsTelemetryTo Variable(satellite:x) Variable(satellite:y)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) Variable(satellite:f))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:propagatesTo Variable(satellite:f1) Variable(satellite:f2)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) Variable(satellite:f1)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) Variable(satellite:f2))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c) Variable(satellite:f2)))Head(ObjectPropertyAtom(satellite:affectsComponent Variable(satellite:f2) Variable(satellite:c))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:sendsCommandTo Variable(satellite:control) Variable(satellite:actuator)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:control) Variable(satellite:fprop)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:actuator) Variable(satellite:fprop))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:suppliesPowerTo Variable(satellite:p) Variable(satellite:c2)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:p) satellite:RegulatorFault_001))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:c2) satellite:RegulatorFault_001)))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:heats Variable(satellite:x) Variable(satellite:y)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) Variable(satellite:f))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:isolatesVibration Variable(satellite:x) Variable(satellite:y)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) Variable(satellite:f))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:mountedOn Variable(satellite:y) Variable(satellite:x)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) Variable(satellite:f))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:physicallySupports Variable(satellite:x) Variable(satellite:y)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) Variable(satellite:f))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:suppliesPowerTo Variable(satellite:x) Variable(satellite:y)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) Variable(satellite:f))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:supports Variable(satellite:x) Variable(satellite:y)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) Variable(satellite:f)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) Variable(satellite:f))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:supports Variable(satellite:x) Variable(satellite:y)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) satellite:LOFault_001))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) satellite:LOFault_001)))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) satellite:OverheatFault_001))Head(ObjectPropertyAtom(satellite:triggersAction satellite:OverheatFault_001 satellite:SafeMode_01)))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:monitors Variable(satellite:x) Variable(satellite:y)) ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) satellite:OverheatFault_001))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y) satellite:OverheatFault_001)))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) satellite:SensorFault_001))Head(ObjectPropertyAtom(satellite:triggersAction satellite:SensorFault_001 satellite:Warning_01)))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:hasFault Variable(satellite:x) satellite:UnderheatFault_001))Head(ObjectPropertyAtom(satellite:triggersAction satellite:UnderheatFault_001 satellite:HeaterON_01)))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:hasFault Variable(satellite:x2) Variable(satellite:f1)) ObjectPropertyAtom(satellite:suppliesPowerTo Variable(satellite:x2) Variable(satellite:y2)))Head(ObjectPropertyAtom(satellite:hasFault Variable(satellite:y2) Variable(satellite:f1))))
+DLSafeRule(Body(ObjectPropertyAtom(satellite:hasFault Variable(satellite:x4) Variable(satellite:f4)) ObjectPropertyAtom(satellite:suppliesPowerTo Variable(satellite:x4) Variable(satellite:y4)))Head(ObjectPropertyAtom(satellite:affectsComponent Variable(satellite:f4) Variable(satellite:y4))))
+)
