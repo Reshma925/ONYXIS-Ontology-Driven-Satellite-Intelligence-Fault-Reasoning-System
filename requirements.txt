@@ -1,0 +1,7 @@
+streamlit==1.28.1
+owlready2==0.51
+rdflib==7.0.0
+plotly==5.17.0
+pandas==2.1.1
+networkx==3.2
+python-dateutil==2.8.2

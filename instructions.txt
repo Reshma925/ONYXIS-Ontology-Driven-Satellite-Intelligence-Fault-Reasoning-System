@@ -1,0 +1,414 @@
+## Project Title
+Semantic Satellite Monitoring and Fault Diagnosis Simulator
+
+---
+
+# Project Vision
+
+Build a complete ontology-driven satellite monitoring simulator using:
+
+- Python
+- Streamlit
+- Owlready2
+- RDFLib
+- SWRL reasoning
+
+The application must simulate satellite telemetry in real time, inject telemetry into an OWL ontology, execute semantic reasoning, infer faults dynamically, and visualize subsystem health through a professional monitoring dashboard UI.
+
+This is NOT a simple dashboard project.
+
+This is a:
+> Semantic Digital Twin + Ontology Reasoning Simulator for Satellite Systems
+
+The ontology file already exists in the root project folder:
+`satellite_full.owl`
+
+The ontology contains:
+- satellite subsystems
+- telemetry concepts
+- sensor properties
+- fault classes
+- SWRL support
+- reasoning logic
+
+The application must be modular, scalable, and visually professional.
+
+---
+
+# Required Tech Stack
+
+## Core
+- Python 3.11+
+- Streamlit
+- Owlready2
+- RDFLib
+
+## Optional Visualization
+- Plotly
+- Pandas
+- NetworkX
+
+---
+
+# Required Python Libraries
+
+The environment already contains:
+
+- streamlit
+- owlready2
+- rdflib
+- pandas
+- plotly
+- networkx
+
+Do NOT ask to install packages again unless absolutely required.
+
+---
+
+# High-Level Architecture
+
+```text
+Streamlit UI
+    ↓
+Telemetry Simulation Engine
+    ↓
+Ontology Update Engine
+    ↓
+OWL Reasoner
+    ↓
+Fault Inference Engine
+    ↓
+Visualization Dashboard
+
+Folder Structure To Create
+project/
+│
+├── app.py
+│
+├── ontology/
+│   └── satellite_full.owl
+│
+├── simulator/
+│   ├── telemetry_generator.py
+│   ├── scenarios.py
+│   └── sensor_models.py
+│
+├── reasoner/
+│   ├── ontology_loader.py
+│   ├── ontology_updater.py
+│   ├── reasoning_engine.py
+│   └── swrl_rules.py
+│
+├── dashboard/
+│   ├── metrics_panel.py
+│   ├── charts.py
+│   ├── alerts.py
+│   ├── subsystem_view.py
+│   └── ontology_inspector.py
+│
+├── utils/
+│   ├── constants.py
+│   ├── logger.py
+│   └── helpers.py
+│
+├── assets/
+│
+└── requirements.txt
+Core Functional Requirements
+1. Ontology Loading
+
+The application must:
+
+load satellite_full.owl
+parse ontology classes
+parse individuals
+parse object properties
+parse datatype properties
+
+Use Owlready2.
+
+The ontology loader must:
+
+initialize cleanly
+support repeated updates
+support reasoning execution
+2. Telemetry Simulation Engine
+
+Create realistic simulated telemetry values for:
+
+Power System
+battery voltage
+battery current
+solar panel output
+power consumption
+Thermal System
+internal temperature
+subsystem temperature
+thermal overload
+Communication System
+signal strength
+antenna alignment
+transmission quality
+AOCS
+gyroscope drift
+orientation deviation
+actuator status
+
+Telemetry must update continuously every 1 second.
+
+Use:
+
+random
+time
+realistic operational ranges
+
+The simulation must support both:
+
+normal operation
+fault scenarios
+3. Scenario Engine
+
+Implement selectable scenarios:
+
+Normal Operation
+Battery Drain
+Thermal Overload
+Solar Panel Failure
+Communication Failure
+Attitude Drift
+
+Each scenario must dynamically alter telemetry generation behavior.
+
+Scenario controls must appear in Streamlit sidebar.
+
+4. Ontology Update Engine
+
+Telemetry values must be injected into ontology individuals dynamically.
+
+Example behavior:
+
+satellite.hasBatteryVoltage = [18.5]
+satellite.hasTemperature = [92]
+
+The ontology must be updated continuously during runtime.
+
+Avoid hardcoded fault logic in Python.
+
+Reasoning must happen through ontology inference.
+
+5. Reasoning Engine
+
+Use Owlready2 reasoning support.
+
+The reasoning engine must:
+
+synchronize ontology
+run semantic inference
+infer fault classes dynamically
+detect subsystem degradation
+
+Fault detection must rely on:
+
+ontology logic
+SWRL rules
+inferred relationships
+
+NOT hardcoded Python conditions.
+
+6. Fault Detection
+
+The UI must display inferred faults such as:
+
+BatteryFault
+ThermalFault
+CommunicationFault
+AlignmentFailure
+PowerSubsystemFailure
+
+Faults must appear automatically based on telemetry conditions.
+
+Use:
+
+warning indicators
+critical alerts
+status badges
+7. Dashboard UI
+
+Create a professional Streamlit dashboard.
+
+Required sections:
+
+A. Main Overview
+
+Display subsystem health cards:
+
+Power
+Thermal
+Communication
+AOCS
+Payload
+
+Each card must show:
+
+status
+telemetry values
+color-coded health
+
+Use:
+
+green = healthy
+yellow = warning
+red = critical
+B. Live Telemetry Charts
+
+Display real-time updating charts for:
+
+voltage
+temperature
+signal strength
+orientation drift
+
+Use Plotly charts.
+
+Charts must update continuously.
+
+C. Fault Console
+
+Create a live scrolling alert console showing:
+
+[12:01:05] Battery voltage dropped
+[12:01:06] BatteryFault inferred
+[12:01:08] Communication degraded
+
+Include timestamps.
+
+D. Ontology Inspector
+
+Display:
+
+inferred classes
+active individuals
+ontology relationships
+fault relationships
+
+This is important for demonstrating semantic reasoning.
+
+E. Scenario Controls
+
+Add sidebar controls for:
+
+selecting fault scenarios
+simulation speed
+telemetry refresh rate
+8. Real-Time Behavior
+
+The application must:
+
+refresh automatically
+simulate live telemetry
+update charts dynamically
+update ontology continuously
+infer faults in near real-time
+
+Use Streamlit session state where necessary.
+
+9. UI Design Requirements
+
+The UI should resemble:
+
+aerospace monitoring systems
+mission control dashboards
+cyber-physical monitoring consoles
+
+Style requirements:
+
+dark theme
+clean layouts
+glowing status indicators
+professional spacing
+responsive cards
+
+Avoid:
+
+childish styling
+overly colorful layouts
+cluttered interfaces
+10. Logging
+
+Create internal logging for:
+
+telemetry updates
+ontology updates
+reasoning execution
+inferred faults
+
+Store logs in memory during runtime.
+
+11. Performance Goals
+
+The application should:
+
+run smoothly locally
+support continuous updates
+avoid memory leaks
+avoid ontology duplication
+avoid repeated ontology reloads
+12. Development Priorities
+
+Priority order:
+
+Ontology loading
+Telemetry simulation
+Ontology updates
+Reasoning execution
+Fault inference
+Dashboard visualization
+Charts
+Scenario engine
+Ontology inspector
+13. Important Constraints
+DO NOT:
+hardcode fault logic
+build static dashboards
+reload ontology unnecessarily
+tightly couple UI and ontology logic
+MUST:
+keep modules separated
+use reusable functions
+use clean architecture
+write readable code
+include comments
+handle runtime exceptions gracefully
+14. Desired End Result
+
+The final application should behave like:
+
+a semantic satellite digital twin
+a live telemetry monitoring system
+an ontology-driven fault diagnosis engine
+
+The user should be able to:
+
+simulate failures
+observe telemetry changes
+see ontology reasoning infer faults automatically
+inspect inferred semantic relationships live
+15. Final Instruction
+
+Build the ENTIRE application end-to-end.
+
+Generate:
+
+all Python files
+all module structures
+all Streamlit pages/components
+ontology integration logic
+simulation engine
+reasoning engine
+dashboard visuals
+
+Ensure the project runs locally with:
+
+streamlit run app.py
+
+The implementation should be complete, modular, production-quality, and executable.
